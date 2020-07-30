@@ -1,0 +1,1672 @@
+#home-bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+.logo1 {
+    position: absolute;
+    top: 200px;
+    left: 380px;
+    background: url(../images/logo.png)no-repeat;
+    background-size: 100%;
+    width: 400px;
+    height: 200px;
+}
+
+.mainpont {
+    position: absolute;
+    top: 500px;
+    left: 400px;
+    font-weight: 500;
+}
+
+.mainpont > span {
+    font-size: 25px;
+}
+
+.mobox {
+    position: absolute;
+    top: 660px;
+    left: 380px;
+
+}
+
+.ios {
+    display: inline-block;
+    background: url(../images/app.png)no-repeat;
+    background-size: cover;
+    width: 180px;
+    height: 60px;
+    background-color: #000;
+}
+
+.aos {
+    display: inline-block;
+    background: url(../images/app1.png)no-repeat;
+    background-size: cover;
+    width: 180px;
+    height: 60px;
+    background-color: #000;
+}
+
+.videoplay {
+    width: 180px;
+    height: 60px;
+    border: 1px solid #fff;
+    line-height: 55px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    margin-left: 13px;
+    transition: opacity .3s ease-in-out, border .3s ease-in-out;
+    overflow: hidden;
+    font-weight: 600;
+
+}
+
+.videoplay:hover {
+    box-shadow: 200px 0px 0px inset rgba(255, 255, 255, 0.6);
+    transition: 0.5s;
+}
+
+#overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .8);
+    opacity: 0;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+#overlay .inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#overlay .inner .close {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    top: -1rem;
+    right: -1rem;
+    text-align: center;
+    line-height: 2rem;
+    text-decoration: none;
+}
+
+#overlay:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*----------s2------------*/
+.texts2 {
+    width: 1000px;
+    position: absolute;
+    top: 383px;
+    left: 310px;
+    color: #000;
+    letter-spacing: -2px;
+}
+
+.texts2 .tite {
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    margin-top: 24px;
+}
+
+.texts2 .tite p {
+    text-align: center;
+
+}
+
+/*------------s3----------*/
+
+#support-grid ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#support-grid ul li {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, .5) 0px 6px 8px 0px;
+}
+
+#support-grid ul li a.on {
+    z-index: 2;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+#support-grid ul li.on:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .7);
+    color: #fff;
+    z-index: 1;
+}
+
+#support-grid ul li:first-child a {
+    padding: .6em 3.6em .5em 3.6em;
+}
+
+#support-grid ul li:last-child {
+    margin-right: 0px;
+}
+
+#support-grid ul li img {
+    margin-top: 0px;
+
+
+}
+
+#support-grid ul li .on {
+    margin-top: 0px;
+    margin-bottom: -3px;
+
+}
+
+.btnbutton1 {
+
+    padding: 1% 0 0 24%;
+    z-index: 4;
+}
+
+.btnbutton1 a {
+    cursor: pointer;
+}
+
+.btn0 {
+    border: 1px solid #000;
+    color: #000;
+    display: inline-block;
+    margin-top: 2rem;
+    padding: .7rem 1rem;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 1s all ease;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/*swiper*/
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    /*    text-align: center;*/
+    font-size: 18px;
+    /*    background: #000;*/
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.carilist {
+    height: auto;
+}
+
+.textbox {
+    position: absolute;
+    top: 420px;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    opacity: .3;
+    z-index: -1;
+}
+
+.textbox h2 {
+
+    font-size: 300px;
+    text-align: center;
+    color: transparent;
+    -webkit-text-stroke: 3px #fff;
+    text-transform: uppercase;
+}
+
+/*등장인물 설명*/
+.cont,
+.cont1 {
+    width: 100%;
+    float: left;
+}
+
+.textbx {
+    width: 40%;
+    float: left;
+    transform: translate(50%, 147%);
+}
+
+.tit_name {
+    font-size: 70px;
+    color: #000;
+    width: 500px;
+    padding-bottom: 30px;
+}
+
+.voice_wrap {
+    overflow: hidden;
+    height: 68px;
+    margin: 65px 0 0 39px;
+    width: 500px;
+}
+
+.voice_actor {
+    float: left;
+}
+
+.tit_actor {
+    float: left;
+    width: 46px;
+    position: absolute;
+    line-height: 34px;
+    color: #000;
+    font-size: 23px;
+
+
+}
+
+.info_actor {
+    display: block;
+    overflow: hidden;
+    padding-left: 9px;
+    font-size: 0;
+}
+
+.txt_actor {
+    display: inline-block;
+    line-height: 34px;
+    width: 100px;
+    color: #000;
+    vertical-align: top;
+}
+
+.list_voice {
+    display: inline-block;
+    height: 21px;
+    margin: 7px 0 0 8px;
+    vertical-align: top;
+}
+
+.list_voice .btn_voice {
+    display: block;
+    overflow: hidden;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #c2c2c2;
+    background: url(../images/ico_voice.png)no-repeat;
+    background-position: 50% 50%;
+
+}
+
+.list_voice li + li {
+    margin-left: 4px;
+}
+
+.desc_ch,
+.desc_ch1 {
+
+    width: 600px;
+}
+
+.desc_g {
+    line-height: 32px;
+    color: #636363;
+
+}
+
+.desc_g span {
+    color: #000;
+    font-weight: 800;
+
+}
+
+.desc_ch .txt_g {
+    display: block;
+    color: 32px;
+    width: 230px;
+    font-size: 20px;
+}
+
+/*등장인물 이미지 */
+.imgbox,
+.imgbox1 {
+    width: 60%;
+    height: 900px;
+    float: left;
+    z-index: 1;
+}
+
+.img1 {
+    background: url(../images/870870.png)no-repeat;
+    width: 100%;
+    height: 870px;
+    float: left;
+    margin-left: 10%;
+}
+
+
+.img2 {
+    background: url(../images/sa870.png)no-repeat;
+    width: 100%;
+    height: 870px;
+    float: left;
+    margin-left: 25px;
+}
+
+.img3 {
+    background: url(../images/sk870.png)no-repeat;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.img4 {
+    background: url(../images/ka870.png)no-repeat;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.img5 {
+    background: url(../images/th870.png)no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.img6 {
+    background: url(../images/madara1.png)no-repeat;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+
+.img7 {
+    background: url(../images/obito0.png)no-repeat;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.img07 {
+    background: url(../images/obito05.png)no-repeat;
+    width: 100%;
+    height: 684px;
+    float: right;
+    padding-right: 148px;
+}
+
+.img8 {
+    background: url(../images/itach01.png)no-repeat;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.img08 {
+    background: url(../images/itchi.png)no-repeat;
+    width: 100%;
+    height: 684px;
+    float: right;
+    padding-right: 148px;
+}
+
+/*=============s4=============*/
+.contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.contents > span {
+    font-size: 19px;
+}
+
+input.onoff {
+    position: absolute;
+    left: -000%;
+    opacity: 0;
+}
+
+input.onoff + label {
+    overflow: hidden;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background: transparent;
+    z-index: 30;
+    float: left;
+}
+
+input.onoff + label:before {
+    content: url(../images/ico_voice.png);
+    width: 56px;
+    height: 56px;
+}
+
+.s4 .content > h1 {
+    text-transform: uppercase;
+    position: absolute;
+    top: 200px;
+    left: 43%;
+    z-index: 5;
+    font-weight: 500;
+}
+
+input[id*="popup"] {
+    display: none;
+}
+
+input[id*="popup"] + label {
+    display: inline-block;
+    padding: 20px 21px;
+    background: transparent;
+    color: #fff;
+    position: absolute;
+    bottom: 55%;
+    left: 49%;
+    cursor: pointer;
+    border-radius: 100%;
+
+}
+
+input[id*="popup"] + label + div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+input[id*="popup"] + label + div > div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 300px;
+    background: #fff;
+    z-index: 2;
+}
+
+.youvideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1066px;
+    height: 600px;
+    background: #fff;
+    z-index: 2;
+}
+
+input[id*="popup"] + label + div > div > label {
+    position: absolute;
+    top: 0%;
+    right: 0;
+    transform: translate(545%, -302%);
+    padding: 29px;
+    background: #dd5347;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+input[id*="popup"] + label + div > label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .9);
+    z-index: 1;
+}
+
+input[id*="popup"] + label + div {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+}
+
+input[id*="popup"]:checked + label + div {
+    opacity: 1;
+    visibility: visible;
+
+}
+
+/*영상보기버튼테두리*/
+/*
+.test1 {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 77px;
+}
+*/
+
+.test1 span {
+    display: block;
+    position: absolute;
+    transition: all .2s;
+    background: #30d0c6;
+    z-index: 2;
+}
+
+.test1 span:nth-child(1) {
+    top: 0;
+    height: 5px;
+    width: 0;
+    position: absolute;
+    left: 0;
+}
+
+.test1 span:nth-child(2) {
+    top: 0;
+    right: 0;
+    width: 5px;
+    height: 0;
+}
+
+.test1 span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    height: 5px;
+    width: 0;
+}
+
+.test1 span:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    width: 5px;
+    height: 0;
+}
+
+.test1:hover span:nth-child(1) {
+    width: 100%;
+}
+
+.test1:hover span:nth-child(2) {
+    height: 100%;
+    transition-delay: .1s;
+}
+
+.test1:hover span:nth-child(3) {
+    width: 100%;
+    transition-delay: .2s;
+}
+
+.test1:hover span:nth-child(4) {
+    height: 100%;
+    transition-delay: .3s;
+}
+
+/*------------s5-----------/
+
+
+
+/*naru mobail slide show*/
+
+#naruto_content1 {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.naru_list {
+    /*    padding: 43px 0 0 0;*/
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    bottom: 10%;
+}
+
+.naru_list li {
+    float: left;
+    width: 3.5%;
+    line-height: 35px;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.naru_list::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.game_Box {
+    /*    width: 30%;*/
+    height: 72px;
+    background: #eee;
+    margin: 0 auto;
+    transition: 1s;
+    box-shadow: 0px 0px 0px inset #eee;
+    border-radius: 100px;
+}
+
+.s5video {
+    margin-left: 610px;
+    width: 430px;
+    height: 745px;
+}
+
+.naru_list li:hover .game_Box {
+    box-shadow: 190px 0px 0px inset #897365 !important;
+}
+
+.naru_list li:hover {
+    font-weight: bold;
+}
+
+
+.naruto_Sublist {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    /*    margin-top: 80px;*/
+    overflow: hidden;
+}
+
+.naruto_Sublist::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.naru_setting::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.naru_Subimg {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.naruto_Subtxt {
+    position: relative;
+    top: 90px;
+}
+
+.naru_setting .naru_Subimg {
+    float: left;
+    width: 60%;
+}
+
+.naru_setting .naruto_Subtxt {
+    float: left;
+    width: 40%;
+    color: #000;
+}
+
+/*소개 텍스트 설정*/
+.naru_Subtxt_title {
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 70px;
+    letter-spacing: 1px;
+}
+
+.naru_Subtxt_txt {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+}
+
+/*소개 이미지 설정*/
+.naru_Subimg,
+.test {
+    transition: 2s;
+}
+
+/*소개 클릭 이벤트*/
+.DELUXE .naru_Subimg {
+    position: absolute;
+    top: 10%;
+    left: 0px;
+    z-index: 1;
+}
+
+.DELUXE .test {
+    position: absolute;
+    right: 0;
+    width: 66%;
+    height: 100%;
+
+}
+
+.PREMIUM .naru_Subimg {
+    position: absolute;
+    top: 10%;
+    left: -100%;
+    z-index: 1;
+}
+
+.PREMIUM .test {
+    position: absolute;
+    right: -100%;
+    top: 0;
+    width: 66%;
+    height: 100%;
+
+}
+
+.SUITE .naru_Subimg {
+    position: absolute;
+    top: 10%;
+    left: -100%;
+    z-index: 1;
+
+}
+
+.SUITE .test {
+    position: absolute;
+    right: -100%;
+    top: 0;
+    width: 66%;
+    height: 100%;
+
+}
+
+
+.DELUXE .naruto_Subtxt {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+}
+
+
+.PREMIUM .naruto_Subtxt {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+}
+
+.SUITE .naruto_Subtxt {
+    position: absolute;
+    right: 10%;
+    top: 30%;
+}
+
+/*==============s6--------------*/
+.contbox {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    bottom: 10%;
+}
+
+.contbox .conbox1 {
+    float: left;
+    border: 1px solid red;
+    width: 43%;
+    height: 460px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contbox .conbox2 {
+    float: left;
+    border: 1px solid red;
+    width: 56.66666%;
+    height: 460px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contbox .conbox3 {
+    float: left;
+    border: 1px solid red;
+    width: 26%;
+    height: 460px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contbox .conbox4 {
+    float: left;
+    border: 1px solid red;
+    width: 35%;
+    height: 460px;
+    position: relative;
+    overflow: hidden;
+}
+
+.contbox .conbox5 {
+    float: left;
+    border: 1px solid red;
+    width: 38.66666%;
+    height: 460px;
+    position: relative;
+    overflow: hidden;
+}
+
+.conimgbx {
+    background: url(../images/s61.png)0 24% no-repeat;
+    background-size: cover;
+    height: 100%;
+
+}
+
+.conimgbx1 {
+    background: url(../images/s62.jpg)0% 46% no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.conimgbx2 {
+    background: url(../images/thumb-1920-1010918.png)no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.conimgbx3 {
+    background: url(../images/s63.png)no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.conimgbx4 {
+    background: url(../images/Naruto-4.jpg)no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.contbox .hoverbx {
+    position: absolute;
+    left: -30%;
+    top: 100px;
+    opacity: 0;
+    visibility: inherit;
+    transition: all .7s;
+}
+
+.contbox .hoverbx1 {
+    position: absolute;
+    right: -30%;
+    top: 100px;
+    opacity: 0;
+    visibility: inherit;
+    transition: all .7s;
+}
+
+.conimgbx:hover .hoverbx {
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all .7s;
+    background: rgba(0, 0, 0, .5);
+}
+
+.conbox1:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 0 9999px;
+    z-index: 9;
+}
+
+.conbox2:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 0 9999px;
+    z-index: 9;
+}
+
+.conbox3:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 0 9999px;
+    z-index: 9;
+}
+
+.conbox4:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 0 9999px;
+    z-index: 9;
+}
+
+.conbox5:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0 0 0 9999px;
+    z-index: 9;
+}
+
+.conimgbx1:hover .hoverbx1 {
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all .7s;
+    background: rgba(0, 0, 0, .5);
+}
+
+.conimgbx2:hover .hoverbx {
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all .7s;
+    background: rgba(0, 0, 0, .5);
+}
+
+.conimgbx3:hover .hoverbx1 {
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all .7s;
+    background: rgba(0, 0, 0, .5);
+}
+
+.conimgbx4:hover .hoverbx1 {
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all .7s;
+    background: rgba(0, 0, 0, .5);
+}
+
+@media (max-width:1920px) {
+    .img02 {
+
+        padding-right: 0px;
+    }
+
+    /*
+    .imgbox,
+    .imgbox1 {
+
+        padding: 0% 0% 0% 31%;
+    }
+*/
+
+    .img6 {
+        margin-right: 200px;
+    }
+
+    .s5video {
+        margin-left: 350px;
+        width: 430px;
+    }
+
+    .contbox .conbox5 {
+        width: 37.66666%;
+    }
+}
+
+@media (max-width:1191px) {
+    .contbox .conbox2 {
+        width: 55%;
+    }
+}
+
+@media screen and (-ms-high-contrast:active),
+all and (-ms-high-contrast:none) {
+    .slide_button:hover {
+        border: 2px solid #f9f9f9;
+    }
+
+
+}
+
+@media all and (min-width:1025px) and (max-width:1700px) {
+    .naruto_Subtxt {
+        top: 50px;
+    }
+
+    .naru_Subtxt_title {
+        text-align: center;
+    }
+
+    .naru_Subtxt_txt {
+        text-align: center;
+        font-size: 15px;
+    }
+
+    .desc_ch,
+    .desc_ch1 {
+        margin: 0;
+        width: 419px;
+    }
+
+    .tit_name {
+        font-size: 56px;
+    }
+}
+
+@media all and (min-width:1023px) and (max-width:1400px) {
+    .naru_list li {
+        width: 6%;
+    }
+
+    .naru_Subtxt_title {
+        font-size: 40px;
+        line-height: 65px;
+    }
+
+    .naru_Subtxt_txt {
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 25px;
+    }
+
+    .texts2 {
+        width: 816px;
+    }
+
+    .tit_name {
+        font-size: 56px;
+    }
+
+}
+
+@media all and (min-width:740px) and (max-width:1023px) {
+
+    .naru_list li {
+        width: 6%;
+    }
+
+    .s5video {
+        margin-left: 230px;
+        width: 430px;
+    }
+
+    .naruto_Subtxt {
+        top: 0px;
+    }
+
+    .naru_Subtxt_title {
+        text-align: center;
+        font-size: 24px;
+        line-height: 30px
+    }
+
+    .naru_Subtxt_txt {
+        text-align: center;
+        font-size: 14px;
+        line-height: 22px
+    }
+
+    .naru_list {
+        width: 90%;
+    }
+
+    .texts2 {
+        width: 500px;
+
+    }
+
+    .textbx {
+        transform: translate(14%, 147%);
+    }
+
+    .tit_name {
+        font-size: 56px;
+    }
+
+    .desc_ch,
+    .desc_ch1 {
+        width: 301px;
+    }
+
+}
+
+@media all and (max-width:739px) {
+    #content1 {
+        height: 900px;
+    }
+
+    .s5video {
+        margin-left: 145px;
+        width: 430px;
+    }
+
+    .texts2 {
+        width: 500px;
+        left: 99px;
+    }
+
+    .tit_name {
+        font-size: 56px;
+    }
+
+    .textbx {
+        transform: translate(14%, 147%);
+    }
+
+    .desc_ch,
+    .desc_ch1 {
+        width: 301px;
+    }
+
+    .naruto_Subtxt {
+        margin-top: 1%s;
+        top: 0;
+    }
+
+    .naru_Subtxt_title {
+        text-align: center;
+        font-size: 18px;
+        line-height: 20px;
+        padding-top: 10px;
+    }
+
+    .naru_Subtxt_txt {
+        display: none;
+    }
+
+    .naru_Subtxt_detail_tit {
+        width: 100%;
+        font-size: 14px;
+        display: block;
+        margin-left: 0%;
+        line-height: 14px;
+    }
+
+    .naru_list {
+        width: 100%;
+
+    }
+
+    .naru_list li {
+        width: 30%;
+        font-size: 14px;
+    }
+
+    .naruto_Sublist {
+        margin-top: 10px;
+        overflow: hidden;
+    }
+
+    .game_Box {
+        width: 90%;
+    }
+
+
+    .naru_setting .naru_Subimg {
+        float: none;
+        width: 100%;
+    }
+
+    .naru_setting .naruto_Subtxt {
+        float: none;
+        width: 100%;
+    }
+
+    .DELUXE .naruto_Subtxt {
+        position: absolute;
+        right: 0;
+        top: 0%;
+        background: rgba(0, 0, 0, 0.7);
+        color: #f9f9f9
+    }
+
+    .PREMIUM .naruto_Subtxt {
+        position: absolute;
+        right: 0;
+        top: 0%;
+        background: rgba(0, 0, 0, 0.7);
+        color: #f9f9f9;
+    }
+
+    .SUITE .naruto_Subtxt {
+        position: absolute;
+        right: 0;
+        top: 0%;
+        background: rgba(0, 0, 0, 0.7);
+        color: #f9f9f9
+    }
+
+    .logo1 {
+        left: 135px;
+    }
+
+    .mainpont {
+        top: 434px;
+        left: 150px;
+    }
+
+    .mobox {
+        left: 12px;
+    }
+
+    .btn_list {
+        opacity: 0;
+    }
+
+    iframe {
+        width: 430px;
+    }
+}
+@media all and (max-width:500px){
+        .swiper-button-prev,
+    .swiper-button-next {
+        visibility: hidden;
+    }
+
+    .logo1 {
+        left: 85px;
+    }
+
+    .mainpont {
+        left: 98px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .mobox {
+        left: 170px;
+    }
+
+    .ios {
+        display: block;
+    }
+
+    .aos {
+        display: block;
+    }
+
+    .videoplay {
+        display: block;
+        margin-left: 0;
+    }
+
+    .texts2 {
+        width: 332px;
+            top: 280px;
+        font-size: 22px;
+        text-align: center;
+    }
+    .img1 {
+    background: url(../images/870870.png)50% 50% no-repeat;
+        background-size: 100%;
+    }
+    .img2{
+     background: url(../images/sa870.png)40% 61% no-repeat;
+         background-size: 55%;
+    }
+    .img3 {
+    background: url(../images/sk870.png)54% 56% no-repeat;
+        background-size: 58%
+    }
+    .img4 {
+    background: url(../images/ka870.png)50% 62% no-repeat;
+        background-size: 49%
+    }
+       .img5 {
+    background: url(../images/th870.png)58% 62% no-repeat;
+        background-size: 49%
+    }
+
+    iframe {
+        width: 400px;
+    }
+
+    .btnbutton1 {
+        padding: 1% 0 0 6%;
+    }
+    .textbox {
+        opacity: 0;
+    }
+    #support-grid ul li:first-child a {
+     padding:11px; 
+}
+
+    .cont,
+    .cont1 {
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    .imgbox,
+    .imgbox1 {
+        padding: 0;
+        width: 100%;
+    }
+
+    .textbx {
+        display: none;
+    }
+
+    .img1 {
+        width: 100%;
+        margin: 0;
+    }
+
+    input[id*="popup"] + label {
+        bottom: 60%;
+        left: 46%;
+    }
+
+    input[id*="popup"] + label + div > div {
+        width: 476px;
+        height: 300px;
+    }
+
+    .youvideo {
+        width: 476px;
+        height: 300px;
+    }
+
+    .s5video {
+        margin-left: 36px;
+    }
+
+    .naru_list li {
+        width: 25%;
+    }
+
+    .naru_list {
+        width: 50%;
+    }
+
+    .contbox .conbox1 {
+        width: 100%;
+        height: 183px;
+    }
+
+    .contbox .conbox2 {
+        width: 100%;
+        height: 183px;
+    }
+
+    .contbox .conbox3 {
+        width: 100%;
+        height: 183px;
+    }
+
+    .contbox .conbox4 {
+        width: 100%;
+        height: 183px;
+    }
+
+    .contbox .conbox5 {
+        width: 100%;
+        height: 183px;
+    }
+
+    .contbox .hoverbx {
+        top: 0;
+    }
+
+    .contbox .hoverbx1 {
+        top: 0;
+    }
+
+    .conimgbx2 {
+        background: url(../images/thumb-1920-1010918.png)0 50% no-repeat;
+        background-size: cover;
+    }
+
+    .conimgbx3 {
+        background: url(../images/s63.png)0 50% no-repeat;
+        background-size: cover;
+    }
+
+}
+
+/*ios 6,7*/
+@media all and (max-width:450px) {
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        visibility: hidden;
+    }
+    .s1 > video{
+        display: none;
+    }
+    .s1{
+    background: url(/images/81XNPmPXK4L._AC_SY741_.jpg)39% 100%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .logo1 {
+        left: 60px;
+        top: 100px;
+        width: 300px;
+    }
+
+    .mainpont {
+        left: 35px;
+        top: 285px;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .mobox {
+        left: 97px;
+        top: 419px;
+    }
+
+    .ios {
+        display: block;
+    }
+
+    .aos {
+        display: block;
+    }
+
+    .videoplay {
+        display: block;
+        margin-left: 0;
+    }
+
+    .texts2 {
+        width: 332px;
+        left: 25px;
+        top: 131px;
+        font-size: 22px;
+        text-align: center;
+    }
+    .img1 {
+    background: url(../images/870870.png)50% 20% no-repeat;
+        background-size: 100%;
+    }
+    .img2{
+     background: url(../images/sa870.png)40% 20% no-repeat;
+         background-size: 55%;
+    }
+    .img3 {
+    background: url(../images/sk870.png)54% 19% no-repeat;
+        background-size: 58%
+    }
+    .img4 {
+    background: url(../images/ka870.png)50% 18% no-repeat;
+        background-size: 49%
+    }
+           .img5 {
+    background: url(../images/th870.png)58% 20% no-repeat;
+        background-size: 49%
+    }
+
+    iframe {
+        width: 400px;
+    }
+
+    .btnbutton1 {
+        padding: 1% 0 0 6%;
+    }
+    .textbox {
+        opacity: 0;
+    }
+    #support-grid ul li:first-child a {
+     padding:11px; 
+}
+
+    .cont,
+    .cont1 {
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    .imgbox,
+    .imgbox1 {
+        padding: 0;
+        width: 100%;
+    }
+
+    .textbx {
+        display: none;
+    }
+
+    .img1 {
+        width: 100%;
+        margin: 0;
+    }
+
+    input[id*="popup"] + label {
+        bottom: 60%;
+        left: 46%;
+    }
+
+    input[id*="popup"] + label + div > div {
+        width: 476px;
+        height: 300px;
+    }
+
+    .youvideo {
+        width: 476px;
+        height: 300px;
+    }
+
+    .s5video {
+        margin-left: 36px;
+        width:220px;
+        height: 570px;
+    }
+    .naru_setting .naru_Subimg {
+    height: 70%;
+}
+
+    .naru_list li {
+        width: 25%;
+    }
+
+    .naru_list {
+        width: 50%;
+    }
+    .contbox{
+        bottom: 28%;
+    }
+
+    .contbox .bt{
+        width: 100%;
+        height: 135px;
+    }
+    .contbox .hoverbx {
+        top: 0;
+    }
+
+    .contbox .hoverbx1 {
+        top: 0;
+    }
+
+    .conimgbx2 {
+        background: url(../images/thumb-1920-1010918.png)0 50% no-repeat;
+        background-size: cover;
+    }
+
+    .conimgbx3 {
+        background: url(../images/s63.png)0 50% no-repeat;
+        background-size: cover;
+    }
+
+}
+
+/*ios se ===========*/
+@media all and (max-width:350px) {
+        .s1 > video{
+        display: none;
+    }
+    .s1{
+    background: url(/images/81XNPmPXK4L._AC_SY741_.jpg)39% 100%;
+        width: 100%;
+        height: 100%;
+    }
+    .logo1 {
+        left: 46px;
+        top: 70px;
+        width: 270px;
+    }
+
+    .mainpont {
+        top: 264px;
+        left: 8px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .mobox {
+        left: 75px;
+        top: 363px;
+    }
+
+    .btn_list {
+        opacity: 0;
+    }
+
+    .ios {
+        display: block;
+    }
+
+    .aos {
+        display: block;
+    }
+
+    .videoplay {
+        display: block;
+        margin-left: 0;
+    }
+
+    .texts2 {
+        width: 300px;
+        left: 10px;
+        top: 157px;
+        font-size: 20px;
+        text-align: center;
+    }
+}
