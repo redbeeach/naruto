@@ -1,0 +1,169 @@
+    <div class="btn-container">
+        <ion-icon name="radio-button-on-sharp"></ion-icon>
+    </div>
+
+    <header class="menu">
+        <div class="menu-item-container">
+            <div class="menu-item">
+                <div class="menu-item-wrapper">
+                    <div class="menu-arrow">
+                        <ion-icon name="arrow-forward-sharp"></ion-icon>
+                    </div>
+                    <div class="menu-text">
+                        <a href="#">Home</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-wrapper">
+                    <div class="menu-arrow">
+                        <ion-icon name="arrow-forward-sharp"></ion-icon>
+                    </div>
+                    <div class="menu-text">
+                        <a href="#">Portfolio</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-wrapper">
+                    <div class="menu-arrow">
+                        <ion-icon name="arrow-forward-sharp"></ion-icon>
+                    </div>
+                    <div class="menu-text">
+                        <a href="#">About</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-wrapper">
+                    <div class="menu-arrow">
+                        <ion-icon name="arrow-forward-sharp"></ion-icon>
+                    </div>
+                    <div class="menu-text">
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-wrapper">
+                    <div class="menu-arrow">
+                        <ion-icon name="arrow-forward-sharp"></ion-icon>
+                    </div>
+                    <div class="menu-text">
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-wrapper">
+                    <div class="menu-arrow">
+                        <ion-icon name="arrow-forward-sharp"></ion-icon>
+                    </div>
+                    <div class="menu-text">
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-wrapper">
+                    <div class="menu-arrow">
+                        <ion-icon name="arrow-forward-sharp"></ion-icon>
+                    </div>
+                    <div class="menu-text">
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script>
+        $(function() {
+//            메뉴 toggle
+            $(".btn-container").click(function() {
+                $(this).toggleClass("close");
+                $(".menu").toggleClass("opened");
+            });
+     //    메뉴 누르면 해당 컨텐츠로 이동
+            $("header .menu-item").click(function(e) {
+                e.preventDefault();
+
+                var tg = $(this);
+                var i = tg.index();
+
+                var section = $(".section").eq(i);
+                var tt = section.offset().top;
+
+                $('html, body').stop().animate({
+                    scrollTop: tt
+                });
+            });
+        });
+
+    </script>
+    <style>
+        .btn-container {
+            z-index: 5;
+            position: fixed;
+            left: 0;
+            margin: 30px;
+            font-size: 40px;
+            cursor: pointer;
+            transition: left 0.7s ease-in-out;
+        }
+
+        .menu {
+            position: absolute;
+            bottom: 0;
+            left: -600px;
+            margin: 20px;
+            transition: left 0.7s ease-in-out;
+        }
+
+        .menu.opened {
+            left: 20px;
+            z-index: 100;
+            position: fixed;
+            transition: all 1s;
+        }
+
+        .btn-container.close {
+            left: calc(30.1vw - 56px);
+            transition: all 1s;
+        }
+
+        .menu-item {
+            font-size: 115px;
+            margin: 15px;
+            overflow: hidden;
+            margin-top: -50px;
+        }
+
+        .menu-item-wrapper {
+            display: flex;
+            position: relative;
+            left: -20%;
+            transition: all 0.2s ease-out;
+        }
+
+        ion-icon {
+            position: relative;
+            top: 8px;
+            margin-right: 10px;
+        }
+
+        .menu-item:hover .menu-item-wrapper {
+            left: 0;
+        }
+@media all and (max-width:500px) {
+    .menu-item {
+    font-size: 60px;
+    }
+    .menu.opened {
+    left: 0px;
+    }
+    .menu-item {
+    
+    margin: 0px;
+    }
+        }
+    </style>
