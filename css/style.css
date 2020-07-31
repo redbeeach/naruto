@@ -55,63 +55,51 @@
     background-color: #000;
 }
 
-.videoplay {
-    width: 180px;
-    height: 60px;
-    border: 1px solid #fff;
-    line-height: 55px;
-    text-align: center;
-    display: inline-block;
+/*--------button hover--------*/
+
+.btn {
+    background: #02358c;
+    color: #fff;
+    position: relative;
+    top: -20px;
+    font-size: 20px;
+    padding: 16px 32px;
+    cursor: pointer;
+    transition: 800ms ease all;
+}
+
+.btn:before,
+.btn:after {
+    content: '';
     position: absolute;
-    margin-left: 13px;
-    transition: opacity .3s ease-in-out, border .3s ease-in-out;
-    overflow: hidden;
-    font-weight: 600;
-
-}
-
-.videoplay:hover {
-    box-shadow: 200px 0px 0px inset rgba(255, 255, 255, 0.6);
-    transition: 0.5s;
-}
-
-#overlay {
-    position: fixed;
-    left: 0;
-    right: 0;
     top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #02358c;
+    transition: 400ms ease all;
+}
+
+.btn:after {
+    right: inherit;
+    top: 57px;
+    left: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, .8);
-    opacity: 0;
-    transition: 0.5s;
-    pointer-events: none;
 }
 
-#overlay .inner {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#overlay .inner .close {
-    position: absolute;
-    width: 2rem;
-    height: 2rem;
+.btn:hover {
     background: #fff;
-    color: #000;
-    border-radius: 50%;
-    top: -1rem;
-    right: -1rem;
-    text-align: center;
-    line-height: 2rem;
-    text-decoration: none;
+    color: #02358c;
 }
 
-#overlay:target {
-    opacity: 1;
-    pointer-events: auto;
+.btn:hover:before,
+.btn:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
 }
+
+/*--------button hover end--------*/
+
 
 /*----------s2------------*/
 .texts2 {
@@ -387,7 +375,7 @@
 
 
 .img2 {
-    background: url(../images/sa870.png)no-repeat;
+    background: url(../images/sa870.png)14% 50% no-repeat;
     width: 100%;
     height: 870px;
     float: left;
@@ -395,27 +383,27 @@
 }
 
 .img3 {
-    background: url(../images/sk870.png)no-repeat;
+    background: url(../images/sk870.png)18% -18% no-repeat;
     width: 100%;
     height: 100%;
     float: left;
 }
 
 .img4 {
-    background: url(../images/ka870.png)no-repeat;
+    background: url(../images/ka870.png)20% -15% no-repeat;
     width: 100%;
     height: 100%;
     float: left;
 }
 
 .img5 {
-    background: url(../images/th870.png)no-repeat;
+    background: url(../images/th870.png)23% -13% no-repeat;
     width: 100%;
     height: 100%;
 }
 
 .img6 {
-    background: url(../images/madara1.png)no-repeat;
+    background: url(../images/madara11.png)19% -17% no-repeat;
     width: 100%;
     height: 100%;
     float: left;
@@ -423,33 +411,58 @@
 
 
 .img7 {
-    background: url(../images/obito0.png)no-repeat;
+    background: url(../images/obito11.png)20% -19% no-repeat;
     width: 100%;
     height: 100%;
     float: left;
-}
-
-.img07 {
-    background: url(../images/obito05.png)no-repeat;
-    width: 100%;
-    height: 684px;
-    float: right;
-    padding-right: 148px;
 }
 
 .img8 {
-    background: url(../images/itach01.png)no-repeat;
+    background: url(../images/itach11.png)16% -15% no-repeat;
     width: 100%;
     height: 100%;
     float: left;
 }
 
-.img08 {
-    background: url(../images/itchi.png)no-repeat;
+.img9 {
+    background: url(../images/pain.png)23% -15% no-repeat;
     width: 100%;
-    height: 684px;
-    float: right;
-    padding-right: 148px;
+    height: 100%;
+    float: left;
+}
+
+.img10 {
+    background: url(../images/deidara22.png)21% -5% no-repeat;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.img11 {
+    background: url(../images/orug.png)15% -5% no-repeat;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.img12 {
+    background: url(../images/jiraiya.png)20% -7% no-repeat;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.img13 {
+    background: url(../images/gaara.png)13% -7% no-repeat;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+.img14 {
+    background: url(../images/hinata11.png)23% -7% no-repeat;
+    width: 100%;
+    height: 100%;
+    float: left;
 }
 
 /*=============s4=============*/
@@ -586,6 +599,7 @@ input[id*="popup"]:checked + label + div {
 }
 */
 
+/*
 .test1 span {
     display: block;
     position: absolute;
@@ -641,6 +655,7 @@ input[id*="popup"]:checked + label + div {
     height: 100%;
     transition-delay: .3s;
 }
+*/
 
 /*------------s5-----------/
 
@@ -656,12 +671,13 @@ input[id*="popup"]:checked + label + div {
 }
 
 .naru_list {
-    /*    padding: 43px 0 0 0;*/
     width: 80%;
     margin: 0 auto;
     text-align: center;
     position: relative;
-    bottom: 10%;
+    bottom: 18%;
+    left: 37%;
+    z-index: 9999;
 }
 
 .naru_list li {
@@ -679,23 +695,25 @@ input[id*="popup"]:checked + label + div {
 }
 
 .game_Box {
-    /*    width: 30%;*/
-    height: 72px;
-    background: #eee;
+    height: 60px;
+    background: #333;
     margin: 0 auto;
     transition: 1s;
     box-shadow: 0px 0px 0px inset #eee;
-    border-radius: 100px;
+    cursor: pointer;
+    color: #e9e9e9;
+    line-height: 3;
+}
+
+.game_Box:hover {
+    box-shadow: 200px 0px 0px inset #6f6a6a;
+    transition: 2s;
 }
 
 .s5video {
     margin-left: 610px;
     width: 430px;
     height: 745px;
-}
-
-.naru_list li:hover .game_Box {
-    box-shadow: 190px 0px 0px inset #897365 !important;
 }
 
 .naru_list li:hover {
@@ -751,13 +769,14 @@ input[id*="popup"]:checked + label + div {
     font-size: 48px;
     font-weight: bold;
     line-height: 70px;
-    letter-spacing: 1px;
+    letter-spacing: -3px;
 }
 
 .naru_Subtxt_txt {
     font-size: 16px;
     font-weight: bold;
     line-height: 30px;
+        letter-spacing: -1px;
 }
 
 /*소개 이미지 설정*/
@@ -767,14 +786,14 @@ input[id*="popup"]:checked + label + div {
 }
 
 /*소개 클릭 이벤트*/
-.DELUXE .naru_Subimg {
+.cap1 .naru_Subimg {
     position: absolute;
     top: 10%;
     left: 0px;
     z-index: 1;
 }
 
-.DELUXE .test {
+.cap1 .test {
     position: absolute;
     right: 0;
     width: 66%;
@@ -782,14 +801,14 @@ input[id*="popup"]:checked + label + div {
 
 }
 
-.PREMIUM .naru_Subimg {
+.cap2 .naru_Subimg {
     position: absolute;
     top: 10%;
     left: -100%;
     z-index: 1;
 }
 
-.PREMIUM .test {
+.cap2 .test {
     position: absolute;
     right: -100%;
     top: 0;
@@ -798,7 +817,7 @@ input[id*="popup"]:checked + label + div {
 
 }
 
-.SUITE .naru_Subimg {
+.cap3 .naru_Subimg {
     position: absolute;
     top: 10%;
     left: -100%;
@@ -806,7 +825,7 @@ input[id*="popup"]:checked + label + div {
 
 }
 
-.SUITE .test {
+.cap3 .test {
     position: absolute;
     right: -100%;
     top: 0;
@@ -816,20 +835,20 @@ input[id*="popup"]:checked + label + div {
 }
 
 
-.DELUXE .naruto_Subtxt {
+.cap1 .naruto_Subtxt {
     position: absolute;
     right: 10%;
     top: 30%;
 }
 
 
-.PREMIUM .naruto_Subtxt {
+.cap2 .naruto_Subtxt {
     position: absolute;
     right: 10%;
     top: 30%;
 }
 
-.SUITE .naruto_Subtxt {
+.cap3 .naruto_Subtxt {
     position: absolute;
     right: 10%;
     top: 30%;
@@ -840,9 +859,11 @@ input[id*="popup"]:checked + label + div {
     position: relative;
     overflow: hidden;
     width: 100%;
-    bottom: 10%;
+    bottom: 8%;
 }
-
+.contbox h2{
+    text-transform: uppercase;
+}
 .contbox .conbox1 {
     float: left;
     border: 1px solid red;
@@ -865,7 +886,7 @@ input[id*="popup"]:checked + label + div {
     float: left;
     border: 1px solid red;
     width: 26%;
-    height: 460px;
+    height: 478px;
     position: relative;
     overflow: hidden;
 }
@@ -874,7 +895,7 @@ input[id*="popup"]:checked + label + div {
     float: left;
     border: 1px solid red;
     width: 35%;
-    height: 460px;
+    height: 478px;
     position: relative;
     overflow: hidden;
 }
@@ -883,26 +904,26 @@ input[id*="popup"]:checked + label + div {
     float: left;
     border: 1px solid red;
     width: 38.66666%;
-    height: 460px;
+    height: 478px;
     position: relative;
     overflow: hidden;
 }
 
 .conimgbx {
-    background: url(../images/s61.png)0 24% no-repeat;
+    background: url(../images/s611.jpg)0 24% no-repeat;
     background-size: cover;
     height: 100%;
 
 }
 
 .conimgbx1 {
-    background: url(../images/s62.jpg)0% 46% no-repeat;
+    background: url(../images/s622.png)0% 46% no-repeat;
     background-size: cover;
     height: 100%;
 }
 
 .conimgbx2 {
-    background: url(../images/thumb-1920-1010918.png)no-repeat;
+    background: url(../images/thumb-1920-1010918.png)67% 50% no-repeat;
     background-size: cover;
     height: 100%;
 }
@@ -1007,19 +1028,201 @@ input[id*="popup"]:checked + label + div {
     background: rgba(0, 0, 0, .5);
 }
 
+/*footer*/
+footer {
+    width: 100%;
+    height: 100%;
+}
+
+.focontainer {
+    height: 489px;
+    padding-top: 142px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 28%;
+}
+
+.focontainer ul li {
+    width: 270px;
+    margin-right: 30px;
+    text-align: center;
+    float: left;
+    line-height: 210px;
+}
+
+.focontainer ul li:last-child {
+    margin-right: 0;
+}
+
+.focontainer ul li a {
+    display: block;
+}
+
+.focontainer ul li a img {
+    vertical-align: middle;
+}
+
+.footer_top p {
+    color: #555;
+    font-size: 14px;
+}
+
+.footer_top {
+    position: absolute;
+    top: 50%;
+    left: 28%;
+
+}
+
+.col-one-forth {
+    width: 270px;
+    margin-right: 30px;
+    float: left;
+}
+
+.col-one-forth:last-child {
+    margin-right: 0;
+}
+
+.footer_logo a {
+    width: 359px;
+    height: 63px;
+    background: url(../images/logo.png) -1% 50% no-repeat;
+    background-size: 44%;
+    text-indent: -9999em;
+    display: block;
+
+}
+
+.col-one-forth:first-child p {
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.col-one-forth:first-child a {
+    font-size: 14px;
+    color: #d1d1d1;
+    text-decoration: none;
+}
+
+.col-one-forth:first-child a span {
+    margin-left: 6px;
+}
+.col-one-forth:hover:first-child p{
+     color: #c7b299;
+}
+
+.footer_top h3 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+    margin-top: 16px;
+    color: #fff;
+}
+
+.footer_top ul {
+    margin-top: 20px;
+}
+
+.footer_top .footer_list li {
+    border-bottom: 1px solid #252525;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.footer_top .footer_list li .post_date {
+    color: #363636;
+    font-size: 12px;
+    line-height: 20px;
+    display: block;
+}
+
+.footer_top .footer_list li:last-child {
+    border-bottom: 0;
+}
+
+.footer_top .footer_list li p {
+    line-height: 20px;
+    word-break: break-all;
+}
+
+.footer_top .footer_list li:hover .post_date {
+    color: #fff;
+}
+
+.footer_top .footer_list li:hover p {
+    color: #c7b299;
+}
+
+.twitter_id {
+    color: #00bff3;
+}
+
+.footer_top .dribble li {
+    width: 130px;
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.footer_top .dribble li:nth-child(2n) {
+    margin: 0 0 10px 0;
+}
+
+.footer_top .dribble li img {
+    width: 120px;
+    height: 63px;
+}
+
+.footer_bottom {
+    background: #111;
+    padding: 28px 0 21px;
+    position: absolute;
+    bottom: 0;
+    font-size: 15px;
+    width: 100%;
+
+}
+
+.container {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+.footer_bottom p {
+    line-height: 20px;
+}
+
+.footer_bottom .copy {
+    float: left;
+}
+
+.footer_bottom .designer {
+    float: right;
+}
+
+.footer_bottom p a {
+    color: #555;
+    text-decoration: none;
+}
+
+.footer_bottom p a:hover {
+    color: #c7b299;
+}
+
+.footer_bottom p span {
+    color: #959595;
+}
+
+.footer_bottom p .devider {
+    margin: 0 8px;
+}
+
 @media (max-width:1920px) {
     .img02 {
 
         padding-right: 0px;
     }
-
-    /*
-    .imgbox,
-    .imgbox1 {
-
-        padding: 0% 0% 0% 31%;
-    }
-*/
 
     .img6 {
         margin-right: 200px;
@@ -1032,6 +1235,31 @@ input[id*="popup"]:checked + label + div {
 
     .contbox .conbox5 {
         width: 37.66666%;
+    }
+
+    .naru_list {
+        padding: 43px 0 0 0;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+        bottom: 14%;
+        ;
+        left: 33%;
+        z-index: 99999;
+    }
+
+    .focontainer {
+        height: 489px;
+        padding-top: 142px;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 20%;
+    }
+
+    .footer_top {
+        left: 20%;
     }
 }
 
@@ -1072,6 +1300,10 @@ all and (-ms-high-contrast:none) {
 
     .tit_name {
         font-size: 56px;
+    }
+
+    .naru_list {
+        left: 40%;
     }
 }
 
@@ -1137,9 +1369,9 @@ all and (-ms-high-contrast:none) {
 
     }
 
-    .textbx {
-        transform: translate(14%, 147%);
-    }
+.textbx {
+    transform: translate(24%, 93%);
+}
 
     .tit_name {
         font-size: 56px;
@@ -1148,6 +1380,18 @@ all and (-ms-high-contrast:none) {
     .desc_ch,
     .desc_ch1 {
         width: 301px;
+    }
+
+    .mobox {
+        left: 168px;
+    }
+
+    .logo1 {
+        left: 255px;
+    }
+
+    .mainpont {
+        left: 276px;
     }
 
 }
@@ -1168,13 +1412,15 @@ all and (-ms-high-contrast:none) {
     }
 
     .tit_name {
-        font-size: 56px;
+        font-size: 40px;
     }
 
     .textbx {
         transform: translate(14%, 147%);
     }
-
+.img1 {
+     margin-left:0; 
+}
     .desc_ch,
     .desc_ch1 {
         width: 301px;
@@ -1210,7 +1456,7 @@ all and (-ms-high-contrast:none) {
     }
 
     .naru_list li {
-        width: 30%;
+        width: 11%;
         font-size: 14px;
     }
 
@@ -1234,7 +1480,7 @@ all and (-ms-high-contrast:none) {
         width: 100%;
     }
 
-    .DELUXE .naruto_Subtxt {
+    .cap1 .naruto_Subtxt {
         position: absolute;
         right: 0;
         top: 0%;
@@ -1242,7 +1488,7 @@ all and (-ms-high-contrast:none) {
         color: #f9f9f9
     }
 
-    .PREMIUM .naruto_Subtxt {
+    .cap2 .naruto_Subtxt {
         position: absolute;
         right: 0;
         top: 0%;
@@ -1250,7 +1496,7 @@ all and (-ms-high-contrast:none) {
         color: #f9f9f9;
     }
 
-    .SUITE .naruto_Subtxt {
+    .cap3 .naruto_Subtxt {
         position: absolute;
         right: 0;
         top: 0%;
@@ -1279,8 +1525,10 @@ all and (-ms-high-contrast:none) {
         width: 430px;
     }
 }
-@media all and (max-width:500px){
-        .swiper-button-prev,
+
+@media all and (max-width:500px) {
+
+    .swiper-button-prev,
     .swiper-button-next {
         visibility: hidden;
     }
@@ -1307,38 +1555,78 @@ all and (-ms-high-contrast:none) {
         display: block;
     }
 
-    .videoplay {
-        display: block;
+    .btn {
+        top: 8px;
         margin-left: 0;
     }
 
     .texts2 {
         width: 332px;
-            top: 280px;
+        top: 280px;
         font-size: 22px;
         text-align: center;
     }
+
     .img1 {
-    background: url(../images/870870.png)50% 50% no-repeat;
+        background: url(../images/870870.png)50% 50% no-repeat;
         background-size: 100%;
     }
-    .img2{
-     background: url(../images/sa870.png)40% 61% no-repeat;
-         background-size: 55%;
+
+    .img2 {
+        background: url(../images/sa870.png)40% 61% no-repeat;
+        background-size: 55%;
     }
+
     .img3 {
-    background: url(../images/sk870.png)54% 56% no-repeat;
+        background: url(../images/sk870.png)54% 56% no-repeat;
         background-size: 58%
     }
+
     .img4 {
-    background: url(../images/ka870.png)50% 62% no-repeat;
-        background-size: 49%
-    }
-       .img5 {
-    background: url(../images/th870.png)58% 62% no-repeat;
+        background: url(../images/ka870.png)50% 62% no-repeat;
         background-size: 49%
     }
 
+    .img5 {
+        background: url(../images/th870.png)58% 62% no-repeat;
+        background-size: 49%
+    }
+    .img6 {
+    background: url(/../images/madara11.png)53% 46% no-repeat;
+    background-size: 62%;
+}
+    .img7 {
+    background: url(../images/obito11.png)73% 50% no-repeat;
+    background-size: 86%;
+    }
+    .img8 {
+    background: url(../images/itach11.png)46% 49% no-repeat;
+    background-size: 74%;
+}
+.img9 {
+    background: url(../images/pain.png)54% 40% no-repeat;
+    background-size: 90%;
+}
+    .img10 {
+    background: url(../images/deidara22.png)63% 49% no-repeat;
+    background-size: 76%;
+}
+    .img11 {
+    background: url(../images/orug.png)42% 46% no-repeat;
+    background-size: 50%;
+}
+    .img12 {
+    background: url(../images/jiraiya.png)57% 45% no-repeat;
+    background-size: 78%;
+}
+    .img13 {
+    background: url(../images/gaara.png)72% 46% no-repeat;
+    background-size: 92%;
+}
+    .img14 {
+    background: url(../images/hinata11.png)56% 46% no-repeat;
+    background-size: 40%;
+}
     iframe {
         width: 400px;
     }
@@ -1346,12 +1634,17 @@ all and (-ms-high-contrast:none) {
     .btnbutton1 {
         padding: 1% 0 0 6%;
     }
+
     .textbox {
         opacity: 0;
     }
+
     #support-grid ul li:first-child a {
-     padding:11px; 
-}
+        padding: 11px;
+    }
+    #tab{
+        margin-left: 78px;
+    }
 
     .cont,
     .cont1 {
@@ -1400,6 +1693,7 @@ all and (-ms-high-contrast:none) {
 
     .naru_list {
         width: 50%;
+        left: 1%;
     }
 
     .contbox .conbox1 {
@@ -1445,6 +1739,28 @@ all and (-ms-high-contrast:none) {
         background-size: cover;
     }
 
+    .focontainer {
+        display: none;
+    }
+
+    .footer_top {
+        top: 0;
+        left: 0;
+    }
+
+    .col-one-forth {
+        width: 100%;
+        margin-right: 0px;
+        margin-left: 42px;
+
+    }
+    .footer_bottom{
+        left: 5%;
+    }
+    .col-one-forth:last-child {
+    display: none;
+}
+
 }
 
 /*ios 6,7*/
@@ -1454,11 +1770,13 @@ all and (-ms-high-contrast:none) {
     .swiper-button-next {
         visibility: hidden;
     }
-    .s1 > video{
+
+    .s1 > video {
         display: none;
     }
-    .s1{
-    background: url(../images/81XNPmPXK4L._AC_SY741_.jpg)39% 100%;
+
+    .s1 {
+        background: url(../images/81XNPmPXK4L._AC_SY741_.jpg)39% 100%;
         width: 100%;
         height: 100%;
     }
@@ -1489,8 +1807,8 @@ all and (-ms-high-contrast:none) {
         display: block;
     }
 
-    .videoplay {
-        display: block;
+    .btn {
+        /*        display: block;*/
         margin-left: 0;
     }
 
@@ -1501,24 +1819,29 @@ all and (-ms-high-contrast:none) {
         font-size: 22px;
         text-align: center;
     }
+
     .img1 {
-    background: url(../images/870870.png)50% 20% no-repeat;
+        background: url(../images/870870.png)50% 20% no-repeat;
         background-size: 100%;
     }
-    .img2{
-     background: url(../images/sa870.png)40% 20% no-repeat;
-         background-size: 55%;
+
+    .img2 {
+        background: url(../images/sa870.png)40% 20% no-repeat;
+        background-size: 55%;
     }
+
     .img3 {
-    background: url(../images/sk870.png)54% 19% no-repeat;
+        background: url(../images/sk870.png)54% 19% no-repeat;
         background-size: 58%
     }
+
     .img4 {
-    background: url(../images/ka870.png)50% 18% no-repeat;
+        background: url(../images/ka870.png)50% 18% no-repeat;
         background-size: 49%
     }
-           .img5 {
-    background: url(../images/th870.png)58% 20% no-repeat;
+
+    .img5 {
+        background: url(../images/th870.png)58% 20% no-repeat;
         background-size: 49%
     }
 
@@ -1529,12 +1852,14 @@ all and (-ms-high-contrast:none) {
     .btnbutton1 {
         padding: 1% 0 0 6%;
     }
+
     .textbox {
         opacity: 0;
     }
+
     #support-grid ul li:first-child a {
-     padding:11px; 
-}
+        padding: 11px;
+    }
 
     .cont,
     .cont1 {
@@ -1575,12 +1900,13 @@ all and (-ms-high-contrast:none) {
 
     .s5video {
         margin-left: 36px;
-        width:220px;
+        width: 220px;
         height: 570px;
     }
+
     .naru_setting .naru_Subimg {
-    height: 70%;
-}
+        height: 70%;
+    }
 
     .naru_list li {
         width: 25%;
@@ -1589,14 +1915,16 @@ all and (-ms-high-contrast:none) {
     .naru_list {
         width: 50%;
     }
-    .contbox{
+
+    .contbox {
         bottom: 28%;
     }
 
-    .contbox .bt{
+    .contbox .bt {
         width: 100%;
         height: 135px;
     }
+
     .contbox .hoverbx {
         top: 0;
     }
@@ -1619,14 +1947,16 @@ all and (-ms-high-contrast:none) {
 
 /*ios se ===========*/
 @media all and (max-width:350px) {
-        .s1 > video{
+    .s1 > video {
         display: none;
     }
-    .s1{
-    background: url(../images/81XNPmPXK4L._AC_SY741_.jpg)39% 100%;
+
+    .s1 {
+        background: url(../images/81XNPmPXK4L._AC_SY741_.jpg)39% 100%;
         width: 100%;
         height: 100%;
     }
+
     .logo1 {
         left: 46px;
         top: 70px;
@@ -1657,7 +1987,7 @@ all and (-ms-high-contrast:none) {
         display: block;
     }
 
-    .videoplay {
+    .btn {
         display: block;
         margin-left: 0;
     }

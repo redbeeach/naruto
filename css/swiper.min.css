@@ -158,7 +158,7 @@
 .swiper-button-next,
 .swiper-button-prev {
     position: absolute;
-    top: 70%;
+    top: 83%;
     width: calc(var(--swiper-navigation-size)/ 44 * 27);
     height: var(--swiper-navigation-size);
     margin-top: calc(-1 * var(--swiper-navigation-size)/ 2);
@@ -601,4 +601,10 @@ button.swiper-pagination-bullet {
     z-index: 0;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden
+}
+@media (max-width:1650px){
+        .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 49%;
+    left: auto;
+}
 }

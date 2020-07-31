@@ -19,51 +19,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400"rel="stylesheet">
 
-<script>
-    $(function(){
-       $("header").load("header.html"); 
-    });
+    <script>
+        $(function() {
+            $("header").load("header.html");
+        });
     </script>
     <script type="text/javascript">
         $(function() {
-            $(".btn_list li").click(function() {
-                var i = $(".btn_list li").index(this);
-                var s = $(".section").eq(i).offset().top;
-                $(".btn_list li i").removeClass();
-                $(".btn_list li i").addClass("fas fa-circle");
-                $(".btn_list li i").eq(i).removeClass();
-                $(".btn_list li i").eq(i).addClass("fas fa-circle on");
-                $("html,body").stop().animate({
-                    scrollTop: s
-                });
-            });
 
-            var deflut = 0;
-            $(".btn_list li i").removeClass();
-            $(".btn_list li i").addClass("fas fa-circle");
-            $(".btn_list li i").eq(deflut).removeClass();
-            $(".btn_list li i").eq(deflut).addClass("fas fa-circle on");
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop();
-                var ht = $(window).height();
-
-                for (var i = 0; i < 7; i++) {
-                    if (scroll >= ht * (i) && scroll < ht * (i + 1)) {
-                        $(".btn_list li i").removeClass();
-                        $(".btn_list li i").addClass("fas fa-circle");
-                        $(".btn_list li i").eq(i).removeClass();
-                        $(".btn_list li i").eq(i).addClass("fas fa-circle on");
-                        console.log("a");
-                    } else if (scroll == 0) {
-                        $(".btn_list li i").removeClass();
-                        $(".btn_list li i").addClass("fas fa-circle");
-                        $(".btn_list li i").eq(0).removeClass();
-                        $(".btn_list li i").eq(0).addClass("fas fa-circle on");
-                    };
-                }
-            });
-                        //    메뉴 누르면 해당 컨텐츠로 이동
+            //    메뉴 누르면 해당 컨텐츠로 이동
             $("header .menu-item").click(function(e) {
                 e.preventDefault();
 
@@ -77,38 +43,53 @@
                     scrollTop: tt
                 });
             });
+            $(window).scroll(function() {
+                var sct = $(window).scrollTop();
+                var bg_color = $('header .menu-item');
 
-                $(".section").on("mousewheel", function(e) {
-                    e.preventDefault();
-                    
-                    var box6Top = $('.s8').offset().top;
+                $(".section").each(function() {
+                    var tg = $(this);
+                    var i = tg.index();
 
-                    var delta = 0;
-
-                    delta = e.originalEvent.wheelDelta / 120;
-                    var moveTop = null;
-                    if (delta < 0) {
-                        if ($(this).next() != undefined) {
-                            new WOW().init();
-                            try {
-                                moveTop = $(this).next().offset().top;
-                            } catch (e) {}
-                        }
-                    } else {
-                        if ($(this).prev() != undefined) {
-                            new WOW().init();
-                            try {
-                                moveTop = $(this).prev().offset().top;
-                            } catch (e) {}
-                        }
+                    if (tg.offset().top <= sct + 114) {
+                        // content별 메뉴명 색상을 바꿔준다.
+                        $("header .menu-item").removeClass('on');
+                        $("header .menu-item").eq(i).addClass('on');
                     }
-                    $("html,body").stop().animate({
-                        "scrollTop": moveTop + "px"
-                    }, 800);
-                    
-                     if (moveTop == box6Top){
-                          return;
-                  }  
+                });
+            });
+
+            $(".section").on("mousewheel", function(e) {
+                e.preventDefault();
+
+                var box6Top = $('.s8').offset().top;
+
+                var delta = 0;
+
+                delta = e.originalEvent.wheelDelta / 120;
+                var moveTop = null;
+                if (delta < 0) {
+                    if ($(this).next() != undefined) {
+                        new WOW().init();
+                        try {
+                            moveTop = $(this).next().offset().top;
+                        } catch (e) {}
+                    }
+                } else {
+                    if ($(this).prev() != undefined) {
+                        new WOW().init();
+                        try {
+                            moveTop = $(this).prev().offset().top;
+                        } catch (e) {}
+                    }
+                }
+                $("html,body").stop().animate({
+                    "scrollTop": moveTop + "px"
+                }, 800);
+
+                if (moveTop == box6Top) {
+                    return;
+                }
             });
         });
     </script>
@@ -143,162 +124,111 @@
         $(function() {
 
             /*소개 클릭 이벤트 글짜*/
-            $(".DELUXE .naruto_Subtxt").show();
-            $(".PREMIUM .naruto_Subtxt").hide();
-            $(".SUITE .naruto_Subtxt").hide();
+            $(".cap1 .naruto_Subtxt").show();
+            $(".cap2 .naruto_Subtxt").hide();
+            $(".cap3 .naruto_Subtxt").hide();
 
 
-            $(".DELUXE .naru_Subimg").css({
+            $(".cap1 .naru_Subimg").css({
                 "left": "0%"
             });
-            $(".DELUXE .test").css({
+            $(".cap1 .test").css({
                 "right": "0%"
             });
-            $(".PREMIUM .naru_Subimg").css({
+            $(".cap2 .naru_Subimg").css({
                 "left": "-100%"
             });
-            $(".PREMIUM .test").css({
+            $(".cap2 .test").css({
                 "right": "-100%"
             });
-            $(".SUITE .naru_Subimg").css({
+            $(".cap3 .naru_Subimg").css({
                 "left": "-100%"
             });
-            $(".SUITE .test").css({
+            $(".cap3 .test").css({
                 "right": "-100%"
             });
-
-            $(".DELUXE_BT>.game_Box").css({
-                "box-shadow": "190px 0px 0px inset #897365"
-            });
-            $(".DELUXE").animate({
+            $(".cap1").animate({
                 left: "0%"
             });
 
-            $(".DELUXE_BT").click(function(e) {
+            $(".cap1_BT").click(function(e) {
                 e.preventDefault();
-                $(".DELUXE .naruto_Subtxt").fadeIn(2000);
-                $(".DELUXE_BT>.game_Box").css({
-                    "box-shadow": "190px 0px 0px inset #897365"
-                });
-                $(".DELUXE .naru_Subimg").css({
+                $(".cap1 .naruto_Subtxt").fadeIn(2000);
+                $(".cap1 .naru_Subimg").css({
                     left: "0%"
                 });
-                $(".DELUXE .test").css({
+                $(".cap1 .test").css({
                     "right": "0%"
                 });
-                $(".PREMIUM .naru_Subimg").css({
+                $(".cap2 .naru_Subimg").css({
                     "left": "-100%"
                 });
-                $(".PREMIUM .test").css({
+                $(".cap2 .test").css({
                     "right": "-100%"
                 });
-                $(".SUITE .naru_Subimg").css({
+                $(".cap3 .naru_Subimg").css({
                     "left": "-100%"
                 });
-                $(".SUITE .test").css({
+                $(".cap3 .test").css({
                     "right": "-100%"
                 });
 
-                $(".PREMIUM .naruto_Subtxt").fadeOut(1500);
-                $(".SUITE .naruto_Subtxt").fadeOut(1500);
-                $(".STANDARD .naruto_Subtxt").fadeOut(1500);
-
-                $(".PREMIUM_BT>.game_Box").css({
-                    "box-shadow": "0px 0px 0px inset #897365"
-                });
-                $(".SUITE_BT>.game_Box").css({
-                    "box-shadow": "0px 0px 0px inset #897365"
-                });
-                $(".STANDARD_BT>.game_Box").css({
-                    "box-shadow": "0px 0px 0px inset #897365"
-                });
-
+                $(".cap2 .naruto_Subtxt").fadeOut(1500);
+                $(".cap3 .naruto_Subtxt").fadeOut(1500);
 
             });
 
-            $(".PREMIUM_BT").click(function(e) {
+            $(".cap2_BT").click(function(e) {
                 e.preventDefault();
-                $(".PREMIUM .naruto_Subtxt").fadeIn(2000);
-                $(".PREMIUM_BT>.game_Box").css({
-                    "box-shadow": "190px 0px 0px inset #897365"
-                });
-                $(".PREMIUM .naru_Subimg").css({
+                $(".cap2 .naruto_Subtxt").fadeIn(2000);
+                $(".cap2 .naru_Subimg").css({
                     left: "0%"
                 });
-                $(".PREMIUM .test").css({
+                $(".cap2 .test").css({
                     right: "0%"
                 });
-                $(".DELUXE .naru_Subimg").css({
+                $(".cap1 .naru_Subimg").css({
                     "left": "-100%"
                 });
-                $(".DELUXE .test").css({
+                $(".cap1 .test").css({
                     right: "-100%"
                 });
-                $(".SUITE .naru_Subimg").css({
+                $(".cap3 .naru_Subimg").css({
                     "left": "-100%"
                 });
-                $(".SUITE .test").css({
+                $(".cap3 .test").css({
                     right: "-100%"
                 });
 
-                $(".DELUXE .naruto_Subtxt").fadeOut(1500);
-                $(".SUITE .naruto_Subtxt").fadeOut(1500);
-                $(".STANDARD .naruto_Subtxt").fadeOut(1500);
-
-
-                $(".DELUXE_BT>.game_Box").css({
-                    "box-shadow": "0px 0px 0px inset #897365"
-                });
-                $(".SUITE_BT>.game_Box").css({
-                    "box-shadow": "0px 0px 0px inset #897365"
-                });
-                $(".STANDARD_BT>.game_Box").css({
-                    "box-shadow": "0px 0px 0px inset #897365"
-                });
-
+                $(".cap1 .naruto_Subtxt").fadeOut(1500);
+                $(".cap3 .naruto_Subtxt").fadeOut(1500);
 
             });
 
-            $(".SUITE_BT").click(function(e) {
+            $(".cap3_BT").click(function(e) {
                 e.preventDefault();
-                $(".SUITE .naruto_Subtxt").fadeIn(2000);
-                $(".SUITE_BT>.game_Box").css({
-                    "box-shadow": "190px 0px 0px inset #897365"
-                });
-                $(".SUITE .naru_Subimg").css({
+                $(".cap3 .naruto_Subtxt").fadeIn(2000);
+                $(".cap3 .naru_Subimg").css({
                     left: "0%"
                 });
-                $(".SUITE .test").css({
+                $(".cap3 .test").css({
                     right: "0%"
                 });
-                $(".DELUXE .naru_Subimg").css({
+                $(".cap1 .naru_Subimg").css({
                     "left": "-100%"
                 });
-                $(".DELUXE .test").css({
+                $(".cap1 .test").css({
                     right: "-100%"
                 });
-                $(".PREMIUM .naru_Subimg").css({
+                $(".cap2 .naru_Subimg").css({
                     "left": "-100%"
                 });
-                $(".PREMIUM .test").css({
+                $(".cap2 .test").css({
                     right: "-100%"
                 });
 
-                $(".DELUXE .naruto_Subtxt").fadeOut(1500);
-                $(".PREMIUM .naruto_Subtxt").fadeOut(1500);
-                $(".STANDARD .naruto_Subtxt").fadeOut(1500);
-
-                $(".DELUXE_BT>.game_Box").css({
-                    "box-shadow": "0px 0px 0px inset #897365"
-                });
-                $(".PREMIUM_BT>.game_Box").css({
-                    "box-shadow": "0px 0px 0px inset #897365"
-                });
-                $(".STANDARD_BT>.game_Box").css({
-                    "box-shadow": "0px 0px 0px inset #897365"
-                });
-
-
+                $(".cap1 .naruto_Subtxt").fadeOut(1500);
+                $(".cap2 .naruto_Subtxt").fadeOut(1500);
             });
 
 
@@ -396,10 +326,9 @@
 
 
         .s5 {
-            background: url(images/s51back.png)50% 100% no-repeat;
+            background: url(images/s51back.png)12% 100% no-repeat;
             background-attachment: fixed;
-            background-size: cover;
-/*            opacity: .5;*/
+            background-size:contain;
         }
 
 
@@ -417,7 +346,7 @@
         }
 
         .s7 {
-            background: url(/images/footer.png)no-repeat;
+            background: url(images/footer.png)no-repeat;
             background-attachment: fixed;
             background-size: cover;
             background-position: 0 50%;
@@ -427,11 +356,11 @@
 </head>
 
 <body>
-   <header></header>
+    <header></header>
     <div id="wrap">
         <div class="section s1">
             <video src="video/narutomain.mp4" id="home-bg-video" muted autoplay loop></video>
-            
+
             <div class="content">
                 <div class="mainbox">
                     <h1 class="logo1 wow fadeInLeft"></h1>
@@ -442,32 +371,24 @@
                     <div class="mobox">
                         <a href="#" class="ios"></a>
                         <a href="#" class="aos"></a>
-                        <a href="#overlay" class="videoplay">
-                            VIEW
-                        </a>
-                        				<div id="overlay">
-					<div class="inner">
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/Rk6_hdRtJOE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						<a href="" class="close">X</a>
-					</div>
-				</div>
+                        <a href="sub1.html" class="btn" target="_blank">DOWNLOAD</a>
                     </div>
                 </div>
             </div>
         </div>
-        
-<!--        s2------------------>
+
+        <!--        s2------------------>
         <div class="section s2">
             <div class="content">
                 <div class="texts2">
                     <span>2020년 초대형 기대작</span>
                     <h1 class="tite wow fadeInLeft" data-wow-delay=".3s">나루토 스톰4 : SHIPPUDEN</h1>
-                    <p class="wow fadeInLeft" data-wow-delay=".8s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem maxime aliquam reprehenderit necessitatibus, facere consectetur suscipit nemo excepturi facilis minus soluta, error incidunt fugiat sint blanditiis a, qui rem commodi?</p>
+                    <p class="wow fadeInLeft" data-wow-delay=".8s" style="font-size: 20px;">옛날에 괴물 구미호가 있었다. 꼬리가 아홉달린 구미호였다.<br> 그 꼬리를 한 번 휘두를 때마다 산이 무너지고 해일이 덮쳤으니,<br> 사람들은 고민 끝에 닌자들을 불러 모았다. 그 중 한 닌자가 <br>괴물 구미호를 봉인하지만, 목숨을 잃고 만다. <br>그 닌자는 "4대호카게" 라고 한다.</p>
                 </div>
             </div>
         </div>
 
-<!--        s3------------------>
+        <!--        s3------------------>
         <div class="section s3">
             <div class="content">
                 <div id="support-grid" class="btnbutton1 wow fadeInUp">
@@ -491,7 +412,7 @@
                                             <div class="tit_name wow fadeInLeft">우즈마키나루토</div>
                                             <div class="desc_ch">
                                                 <div class="desc_g wow fadeInLeft" data-wow-delay=".8s"><span class="txt_g">&lt;예언의아이&gt;</span>
-                                                     <div>&lt;나뭇잎 마을&gt;의 닌자이자 구미의 인주력 나뭇잎 마을 제일의 닌자<br>호카게 이름을 물려받아 역대 호카게보다 뛰어난<br>호카게가 되는것을 목표로 하는 소년.</div>
+                                                    <div>&lt;나뭇잎 마을&gt;의 닌자이자 구미의 인주력 나뭇잎 마을 제일의 닌자<br>호카게 이름을 물려받아 역대 호카게보다 뛰어난<br>호카게가 되는것을 목표로 하는 소년.</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -527,19 +448,19 @@
                                         <h2>sakora</h2>
                                     </div>
                                     <div class="cont">
-                                       <div class="textbx">
-                                        <div class="tit_name wow fadeInLeft">하루노사쿠라</div>
-                                        <div class="desc_ch">
-                                            <div class="desc_g"><span class="txt_g">&lt;의료부문 총 책임자&gt;</span>
-                                                <div>나루토 사스케와 함께 7반에 배속된 인물<br>뛰어난 재능 보다는 잘 돌아가는 머리와 기본기나 컨트롤에 충실한 타입<br>닌자로서 재능은 나루토와사스케보다 부족하지만<br>즉 공부는 누구보다 뛰어나다.</div>
+                                        <div class="textbx">
+                                            <div class="tit_name wow fadeInLeft">하루노사쿠라</div>
+                                            <div class="desc_ch">
+                                                <div class="desc_g"><span class="txt_g">&lt;의료부문 총 책임자&gt;</span>
+                                                    <div>나루토 사스케와 함께 7반에 배속된 인물<br>뛰어난 재능 보다는 잘 돌아가는 머리와 기본기나 컨트롤에 충실한 타입<br>닌자로서 재능은 나루토와사스케보다 부족하지만<br>즉 공부는 누구보다 뛰어나다.</div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="imgbox">
+                                            <div class="img3">
+                                            </div>
+
                                         </div>
-                                    <div class="imgbox">
-                                        <div class="img3">
-                                        </div>
-                                      
-                                    </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
@@ -547,18 +468,18 @@
                                         <h2>kakasi</h2>
                                     </div>
                                     <div class="cont">
-                                       <div class="textbx">
-                                        <div class="tit_name wow fadeInLeft">하타케카카시</div>
-                                        <div class="desc_ch">
-                                            <div class="desc_g"><span class="txt_g">&lt;사륜안의 카카시&gt;</span>
-                                                <div>닌자 아카데미에서 갓 졸업한 주인공 나루토 사스케 사쿠라를 맡은<br> 7반 담임선생인 나뭇잎마을의 상급닌자이다. <br>4대 호카게의 제자로 전직 암부이기도하다.</div>
+                                        <div class="textbx">
+                                            <div class="tit_name wow fadeInLeft">하타케카카시</div>
+                                            <div class="desc_ch">
+                                                <div class="desc_g"><span class="txt_g">&lt;사륜안의 카카시&gt;</span>
+                                                    <div>닌자 아카데미에서 갓 졸업한 주인공 나루토 사스케 사쿠라를 맡은<br> 7반 담임선생인 나뭇잎마을의 상급닌자이다. <br>4대 호카게의 제자로 전직 암부이기도하다.</div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div class="imgbox">
+                                            <div class="img4">
+                                            </div>
                                         </div>
-                                    <div class="imgbox">
-                                        <div class="img4">
-                                        </div>
-                                    </div>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
@@ -566,25 +487,25 @@
                                         <h2>Tsunade</h2>
                                     </div>
                                     <div class="cont">
-                                       <div class="textbx">
-                                        <div class="tit_name wow fadeInLeft">츠나데</div>
-                                        <div class="desc_ch">
-                                            <div class="desc_g"><span class="txt_g">&lt;분노의 죄(드래곤 씬)&gt;</span>
-                                                <div>나뭇잎마을의 5대호카게이자 초대호카게의 손녀이며<br> 비마을 수장이 인정한 전설의 3닌자중한명.<br> 나루토세계의최고의 의료닌자이며 후배여닌자들에게 동경의대상이다.</div>
+                                        <div class="textbx">
+                                            <div class="tit_name wow fadeInLeft">츠나데</div>
+                                            <div class="desc_ch">
+                                                <div class="desc_g"><span class="txt_g">&lt;최초여성호카게&gt;</span>
+                                                    <div>나뭇잎마을의 5대호카게이자 초대호카게의 손녀이며<br> 비마을 수장이 인정한 전설의 3닌자중한명.<br> 나루토세계의최고의 의료닌자이며 후배여닌자들에게 동경의대상이다.</div>
+                                                </div>
                                             </div>
                                         </div>
-                                        </div>
-                                    <div class="imgbox">
-                                        <div class="img5">
+                                        <div class="imgbox">
+                                            <div class="img5">
+                                            </div>
                                         </div>
                                     </div>
-                                     </div>
                                 </div>
 
                             </div>
 
                             <!-- Add Arrows -->
-                            
+
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
 
@@ -603,15 +524,15 @@
                                             <div class="tit_name">우치하마다라</div>
 
                                             <div class="desc_ch1">
-                                                <div class="desc_g"><span class="txt_g">&lt;분노의 죄(드래곤 씬)&gt;</span>
-                                                    <div>&lt;나뭇잎 마을&gt;의 닌자이자 구미의 인주력 나뭇잎 마을 제일의 닌자 호카게<br>이름을 물려받아 역대 호카게보다 뛰어난<br>호카게가 되는것을 목표로 하는 소년.</div>
+                                                <div class="desc_g"><span class="txt_g">&lt;나뭇잎 최초 탈주닌자&gt;</span>
+                                                    <div>&lt;나뭇잎 마을&gt;을 설립한 두명 중 한명이자 나뭇잎 최초의 탈주닌자<br>마을 창세기 이전부터 대립한 인물이며 당시 우치하 일족의 수장.</div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="imgbox1">
                                             <div class="img6">
                                             </div>
-                                     
+
                                         </div>
                                     </div>
                                 </div>
@@ -624,15 +545,15 @@
                                             <div class="tit_name">우치하오비토</div>
 
                                             <div class="desc_ch1">
-                                                <div class="desc_g"><span class="txt_g">&lt;분노의 죄(드래곤 씬)&gt;</span>
-                                                    <div>&lt;돼지의 모자&gt; 주점을 운영하며 여행을 하고 있다.<br>겉모습은 소년이지만 그 실체는 &lt;일곱 개의 대죄&gt; 기사단 리더.<br>조금 엉큼하지만 믿음직스럽다.</div>
+                                                <div class="desc_g"><span class="txt_g">&lt;의문의남자&gt;</span>
+                                                    <div>소용돌이 모양에 오른쪽 눈에 구멍이 뚫린 주황색의 기괴한 가면을 쓰고 있는 정체불명의 인물.<br><br></div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="imgbox1" style="padding: 0% 0% 0% 28%;">
+                                        <div class="imgbox1">
                                             <div class="img7">
                                             </div>
-                                         
+
                                         </div>
                                     </div>
                                 </div>
@@ -645,125 +566,184 @@
                                             <div class="tit_name">우치하이타치</div>
 
                                             <div class="desc_ch1">
-                                                <div class="desc_g"><span class="txt_g">&lt;분노의 죄(드래곤 씬)&gt;</span>
-                                                    <div>&lt;돼지의 모자&gt; 주점을 운영하며 여행을 하고 있다.<br>겉모습은 소년이지만 그 실체는 &lt;일곱 개의 대죄&gt; 기사단 리더.<br>조금 엉큼하지만 믿음직스럽다.</div>
+                                                <div class="desc_g"><span class="txt_g">&lt;&gt;</span>
+                                                    <div>우치하 사스케의 친형이다<br>사스케 어릴적 기억에는 자상하고 닌자로서 능력도 뛰어나<br> 동경의 대상이었다 그러다 사스케가 7살때 사스케를 제외한 일족 전부 죽이고 탈주하여 범죄조직 아카츠키에 들어간다.</div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="imgbox1">
                                             <div class="img8">
                                             </div>
-                                        
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="imgbox">
-                                        <div class="img4">
-                                        </div>
-                                    </div>
-                                    <div class="textbox">
-                                        <h2>kakasi</h2>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="imgbox">
-                                        <div class="img5">
-                                        </div>
-                                    </div>
-                                    <div class="textbox">
-                                        <h2>kakasi</h2>
-                                    </div>
-                                </div>
 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="textbox">
+                                        <h2>pain</h2>
+                                    </div>
+                                    <div class="cont1">
+                                        <div class="textbx">
+                                            <div class="tit_name">페인</div>
+
+                                            <div class="desc_ch1">
+                                                <div class="desc_g"><span class="txt_g">&lt;아카츠키리더&gt;</span>
+                                                    <div>아카츠키의 리더. 2번째로 등장한 윤회안의 소유자이다.<br>얼굴에 달린 수많은 피어싱은
+                                                        &lt;pain(고통)&gt;이란 이름과 연관성이 깊다
+                                                        <br>참고로 얼굴과 귀말고도 전신에 뚫려있다. </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="imgbox1">
+                                            <div class="img9">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="textbox">
+                                        <h2>deidara</h2>
+                                    </div>
+                                    <div class="cont1">
+                                        <div class="textbx">
+                                            <div class="tit_name">데이다라</div>
+
+                                            <div class="desc_ch1">
+                                                <div class="desc_g"><span class="txt_g">&lt;&gt;</span>
+                                                    <div>아카츠키의 멤버치고는 다소 명랑하다.<br>겉모습은 소년이지만 그 실체는 아카츠키멤버<br>조금 엉큼하지만 터프하며 남성미있다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="imgbox1">
+                                            <div class="img10">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <!-- Add Arrows -->
-                            <!--
+                                                      <!-- Add Arrows -->
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
--->
                         </div>
                     </li>
                     <li class="list_li">
                         <div class="swiper-container">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="imgbox">
-                                        <div class="img1">
-                                        </div>
-                                    </div>
                                     <div class="textbox">
-                                        <h2>naruto</h2>
+                                        <h2>orong</h2>
                                     </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="imgbox">
-                                        <div class="img2">
-                                        </div>
-                                    </div>
-                                    <div class="textbox">
-                                        <h2>sasuke</h2>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="imgbox">
-                                        <div class="img3">
-                                        </div>
-                                    </div>
-                                    <div class="textbox">
-                                        <h2>sakora</h2>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="imgbox">
-                                        <div class="img4">
-                                        </div>
-                                    </div>
-                                    <div class="textbox">
-                                        <h2>kakasi</h2>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="imgbox">
-                                        <div class="img5">
-                                        </div>
-                                    </div>
-                                    <div class="textbox">
-                                        <h2>kakasi</h2>
-                                    </div>
-                                </div>
+                                    <div class="cont1">
+                                        <div class="textbx">
+                                            <div class="tit_name">오로치마루</div>
 
+                                            <div class="desc_ch1">
+                                                <div class="desc_g"><span class="txt_g">&lt;&gt;</span>
+                                                    <div>츠나데와 같은 전설의3닌자<br>주로 뱀을 소환하는 술법을 사용하거나 자신의 신체부위를 늘려 싸운다.<br>특유의 잔인함으로 무서운포스를 보여준인물이다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="imgbox1">
+                                            <div class="img11">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="textbox">
+                                        <h2>orong</h2>
+                                    </div>
+                                    <div class="cont1">
+                                        <div class="textbx">
+                                            <div class="tit_name">지라이야</div>
+
+                                            <div class="desc_ch1">
+                                                <div class="desc_g"><span class="txt_g">&lt;&gt;</span>
+                                                    <div>나뭇잎닌자이자 소설가.<br>과거 제2차 닌자대전때 오로치마루,츠나데와 더불어 전설의 세닌자라 불리며 타국까지 이름을 떨친 굉장한 실력자며 많은 인술을 알고있으며 주로 두꺼비를 불러내는 소환술이 두드러졌다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="imgbox1">
+                                            <div class="img12">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="textbox">
+                                        <h2>gaara</h2>
+                                    </div>
+                                    <div class="cont1">
+                                        <div class="textbx">
+                                            <div class="tit_name">가아라</div>
+
+                                            <div class="desc_ch1">
+                                                <div class="desc_g"><span class="txt_g">&lt;사폭의가아라&gt;</span>
+                                                    <div>이명은 사폭의 가아라.<br>모래마을 출신이기도 하지만 그가 사용하는 모래가 항상 뒤에 메고 다니는 거대한 모래마을 문양의 모래항아리에서 마치 사막폭풍같이 거대하게 나와서 붙여진이명이다.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="imgbox1">
+                                            <div class="img13">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="textbox">
+                                        <h2>hinata</h2>
+                                    </div>
+                                    <div class="cont1">
+                                        <div class="textbx">
+                                            <div class="tit_name">휴우가히나타</div>
+
+                                            <div class="desc_ch1">
+                                                <div class="desc_g"><span class="txt_g">&lt;&gt;</span>
+                                                    <div>우치하 일족과 더불어 명문가라 칭송되는 휴우가 일족 종가 출신이다. 진청색 머리에 내성적인 성격을 지닌 캐릭터.</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="imgbox1">
+                                            <div class="img14">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                             <!-- Add Arrows -->
-                            <!--
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
--->
+
                         </div>
                     </li>
                 </ul>
             </div>
         </div>
-        
-<!--        s4------------------>        
+
+        <!--        s4------------------>
         <div class="section s4">
             <div class="content" style="background: rgba(0,0,0,.4);">
-                 <div class="contents">
-					<a class="icon" href="#overlay"><i class="far fa-play-circle"></i></a>
-					<h3 class="content_tt wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">Waxom Video Presentation</h3>
-					<span>03:26</span>
-				</div>
+                <div class="contents">
+                    <a class="icon" href="#overlay"><i class="far fa-play-circle"></i></a>
+                    <h3 class="content_tt wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".5s">Naruto Video Presentation</h3>
+                    <span>03:26</span>
+                </div>
                 <div class="youtubeBox">
                     <input type="checkbox" id="popup">
                     <label for="popup" class="test1">
                         <span></span><span></span><span></span><span></span>
-                     
+
                     </label>
                     <div>
                         <div>
-                            <video src="video/naruto.mp4" loop autoplay muted class="youvideo"></video>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/RqFBvtOwtAM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="youvideo"></iframe>
                             <label for="popup"></label>
                         </div>
                         <label for="popup"></label>
@@ -779,7 +759,7 @@
             <div class="content">
                 <div id="naruto_content1">
                     <ul class="naruto_Sublist">
-                        <li class="DELUXE naru_setting" style="left: 0%;">
+                        <li class="cap1 naru_setting" style="left: 0%;">
                             <div class="naru_Subimg" style="left: -100%;">
                                 <video src="video/%5BReadygo%5DVideo%202020-07-20%2017-32-12.mp4" autoplay muted loop class="s5video"></video>
                             </div>
@@ -791,7 +771,7 @@
                                 <p class="naru_Subtxt_txt">명대사와 스토리는 물론 각 캐릭터의 스킬과 합기<br>화려한 전투씬을 게임으로 재현했습니다.</p>
                             </div>
                         </li>
-                        <li class="PREMIUM naru_setting">
+                        <li class="cap2 naru_setting">
                             <div class="naru_Subimg" style="left: -100%;">
                                 <video src="video/%5BReadygo%5DVideo%202020-07-20%2017-41-02.mp4" autoplay muted loop class="s5video"></video>
                             </div>
@@ -803,7 +783,7 @@
                             </div>
                         </li>
 
-                        <li class="SUITE naru_setting">
+                        <li class="cap3 naru_setting">
                             <div class="naru_Subimg" style="left: -100%;">
                                 <video src="video/%5BReadygo%5DVideo%202020-07-20%2017-41-02.mp4" autoplay muted loop class="s5video"></video>
                             </div>
@@ -816,15 +796,15 @@
                             </div>
                         </li>
                     </ul>
-                                          <ul class="naru_list">
-                        <li class="DELUXE_BT">
-                            <div class="game_Box" style="box-shadow: rgb(137, 115, 101) 0px 0px 0px inset;"></div>
+                    <ul class="naru_list">
+                        <li class="cap1_BT">
+                            <div class="game_Box">1</div>
                         </li>
-                        <li class="PREMIUM_BT">
-                            <div class="game_Box" style="box-shadow: rgb(137, 115, 101) 0px 0px 0px inset;"></div>
+                        <li class="cap2_BT">
+                            <div class="game_Box">2</div>
                         </li>
-                        <li class="SUITE_BT">
-                            <div class="game_Box" style="box-shadow: rgb(137, 115, 101) 0px 0px 0px inset;"></div>
+                        <li class="cap3_BT">
+                            <div class="game_Box">3</div>
                         </li>
 
                     </ul>
@@ -833,73 +813,151 @@
             </div>
         </div>
 
-<!--        s6------------------>
+        <!--        s6------------------>
         <div class="section s6">
             <div class="content">
                 <div class="contbox">
                     <div class="conbox1 bt">
                         <div class="conimgbx">
                             <div class="hoverbx">
-                                <h2>loremaaaaaa</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing<br>elit. Pariatur aliquam odit deserunt rem, incidunt, quae<br> ab sit, assumenda aut .</p>
+                                <h2>lornarutostorm4</h2>
                             </div>
                         </div>
                     </div>
                     <div class="conbox2 bt">
                         <div class="conimgbx1">
                             <div class="hoverbx1">
-                                <h2>loremaaaaaa</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing<br>elit. Pariatur aliquam odit deserunt ue, iure, quae<br> ab sit, assumenda aut .</p>
+                                <h2>narutostorm4</h2>
                             </div>
                         </div>
                     </div>
                     <div class="conbox3 bt">
                         <div class="conimgbx2">
                             <div class="hoverbx">
-                                <h2>loremaaaaaa</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing<br>elit. Pariatur aliquam odit desertque, iure, quae<br> ab sit, assumenda aut .</p>
+                                <h2>aaanarutostorm4</h2>
                             </div>
                         </div>
                     </div>
                     <div class="conbox4 bt">
                         <div class="conimgbx3">
                             <div class="hoverbx1">
-                                <h2>loremaaaaaa</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing<br>elit. Pariatur aliquam odit deserun, iure, quae<br> ab sit, assumenda aut .</p>
+                                <h2>narutostorm4</h2>
                             </div>
                         </div>
                     </div>
                     <div class="conbox5 bt">
                         <div class="conimgbx4">
                             <div class="hoverbx1">
-                                <h2>loremaaaaaa</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing<br>elit. Pariatur aliquam odit deserun, iure, quae<br> ab sit, assumenda aut .</p>
+                                <h2>narutostorm4</h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-<!--        footer-->
-        <div class="section s7">
-            <div class="content">
+        <!-- ------------ footer --------------->
 
+        <footer class="section s7">
+            <div class="content" style="background: rgba(0,0,0,.8)">
+
+                <div class="focontainer">
+                    <ul class="clearfix">
+                        <li><a href=""><img src="images/partners_barbers.png" alt="barbers" /></a></li>
+                        <li><a href=""><img src="images/partners_delicious.png" alt="delicious" /></a></li>
+                        <li><a href=""><img src="images/partners_desingers.png" alt="desingers" /></a></li>
+                        <li><a href=""><img src="images/partners_royal.png" alt="royal" /></a></li>
+                    </ul>
+                </div>
+            <div class="footer_top">
+                <div class="container clearfix">
+                    <div class="col-one-forth">
+                        <h2 class="footer_logo"><a href="">footer logo</a></h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.
+                        </p>
+                        <a href="">Read More <span><i class="fas fa-caret-right"></i></span></a>
+                    </div>
+                    <div class="col-one-forth">
+                        <h3>Recent Posts</h3>
+                        <ul class="footer_list">
+                            <li>
+                                <span class="post_date">September 07, 2020</span>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                </p>
+                            </li>
+                            <li>
+                                <span class="post_date">September 07, 2020</span>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                </p>
+                            </li>
+                            <li>
+                                <span class="post_date">September 07, 2020</span>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-one-forth">
+                        <h3>Our Twitter</h3>
+                        <ul class="footer_list">
+                            <li>
+                                <p>
+                                    <span class="twitter_id">@redbee</span> Cum soluta nobis eleifend option congue nihil imperdiet doming
+                                </p>
+                                <span class="post_date">3 mins ago</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <span class="twitter_id">@redbee</span> Cum soluta nobis eleifend option congue nihil imperdiet doming
+                                </p>
+                                <span class="post_date">3 mins ago</span>
+                            </li>
+                            <li>
+                                <p>
+                                    <span class="twitter_id">@redbee</span> Cum soluta nobis eleifend option congue nihil imperdiet doming
+                                </p>
+                                <span class="post_date">3 mins ago</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-one-forth">
+                        <h3>Dribbble Widget</h3>
+                        <ul class="dribble">
+                            <li><a href=""><img src="images/dribble1.jpg" alt="dribble 01" /></a></li>
+                            <li><a href=""><img src="images/dribble2.jpg" alt="dribble 02" /></a></li>
+                            <li><a href=""><img src="images/dribble3.jpg" alt="dribble 03" /></a></li>
+                            <li><a href=""><img src="images/dribble4.jpg" alt="dribble 04" /></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-               
-               
-                <div class="s8">
+            <div class="footer_bottom">
+                <div class="container clearfix">
+                    <div class="copy">
+                        <p>
+                            Copyright &copy; 2020 <span>naruto</span> <span class="devider">&#124;</span> <a href="">Privacy Policy</a> <span class="devider">&#124;</span> <a href="">FAQ</a> <span class="devider">&#124;</span> <a href="">Support</a>
+                        </p>
+                    </div>
+                    <div class="designer">
+                        <p>
+                            Designed by <a href="">redbee</a> <span class="devider">&#124;</span> Only on <a href=""> Market</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+        </footer>
+ 
+
+
+        <div class="s8">
         </div>
     </div>
-    <ul class="btn_list">
-        <li><i class="fas fa-circle"></i></li>
-        <li><i class="fas fa-circle"></i></li>
-        <li><i class="fas fa-circle"></i></li>
-        <li><i class="fas fa-circle"></i></li>
-        <li><i class="fas fa-circle"></i></li>
-        <li><i class="fas fa-circle"></i></li>
-        <li><i class="fas fa-circle"></i></li>
-    </ul>
+
 
 
 </body></html>

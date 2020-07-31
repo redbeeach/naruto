@@ -1,5 +1,7 @@
     <div class="btn-container">
-        <ion-icon name="radio-button-on-sharp"></ion-icon>
+        <div class="navbar">
+            <div class="nav-toggle">menu</div>
+        </div>
     </div>
 
     <header class="menu">
@@ -40,7 +42,17 @@
                         <ion-icon name="arrow-forward-sharp"></ion-icon>
                     </div>
                     <div class="menu-text">
-                        <a href="#">Contact</a>
+                        <a href="#">Video</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <div class="menu-item-wrapper">
+                    <div class="menu-arrow">
+                        <ion-icon name="arrow-forward-sharp"></ion-icon>
+                    </div>
+                    <div class="menu-text">
+                        <a href="#">Mobail</a>
                     </div>
                 </div>
             </div>
@@ -60,17 +72,7 @@
                         <ion-icon name="arrow-forward-sharp"></ion-icon>
                     </div>
                     <div class="menu-text">
-                        <a href="#">Contact</a>
-                    </div>
-                </div>
-            </div>
-            <div class="menu-item">
-                <div class="menu-item-wrapper">
-                    <div class="menu-arrow">
-                        <ion-icon name="arrow-forward-sharp"></ion-icon>
-                    </div>
-                    <div class="menu-text">
-                        <a href="#">Contact</a>
+                        <a href="#">footer</a>
                     </div>
                 </div>
             </div>
@@ -78,12 +80,12 @@
     </header>
     <script>
         $(function() {
-//            메뉴 toggle
+            //            메뉴 toggle
             $(".btn-container").click(function() {
                 $(this).toggleClass("close");
                 $(".menu").toggleClass("opened");
             });
-     //    메뉴 누르면 해당 컨텐츠로 이동
+            //    메뉴 누르면 해당 컨텐츠로 이동
             $("header .menu-item").click(function(e) {
                 e.preventDefault();
 
@@ -102,13 +104,34 @@
     </script>
     <style>
         .btn-container {
-            z-index: 5;
+            z-index: 9999;
             position: fixed;
             left: 0;
-            margin: 30px;
-            font-size: 40px;
+
+            font-size: 20px;
             cursor: pointer;
             transition: left 0.7s ease-in-out;
+        }
+
+        .navbar {
+            box-sizing: border-box;
+            position: fixed;
+            width: 4%;
+            height: 100vh;
+            background: #a72929;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 2.4px solid #fff;
+        }
+
+        .nav-toggle {
+            cursor: pointer;
+            transform: rotate(-90deg);
+            font-family: "Flash Back - Demo";
+            color: #fff;
+            font-weight: lighter;
+            text-transform: uppercase;
         }
 
         .menu {
@@ -120,15 +143,16 @@
         }
 
         .menu.opened {
-            left: 20px;
+            left: 63px;
             z-index: 100;
             position: fixed;
             transition: all 1s;
         }
 
         .btn-container.close {
-            left: calc(30.1vw - 56px);
+            /*            left: calc(30.1vw - 70px);*/
             transition: all 1s;
+            transition: right 0.7s ease-in-out;
         }
 
         .menu-item {
@@ -145,6 +169,11 @@
             transition: all 0.2s ease-out;
         }
 
+        header .menu-item.on a {
+            color: #ffeb3b;
+            font-weight: bold;
+        }
+
         ion-icon {
             position: relative;
             top: 8px;
@@ -154,16 +183,20 @@
         .menu-item:hover .menu-item-wrapper {
             left: 0;
         }
-@media all and (max-width:500px) {
-    .menu-item {
-    font-size: 60px;
-    }
-    .menu.opened {
-    left: 0px;
-    }
-    .menu-item {
-    
-    margin: 0px;
-    }
+
+        @media all and (max-width:500px) {
+            .menu-item {
+                font-size: 60px;
+            }
+
+            .menu.opened {
+                left: 0px;
+            }
+
+            .menu-item {
+
+                margin: 0px;
+            }
         }
+
     </style>
