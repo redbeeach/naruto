@@ -859,7 +859,7 @@ input[id*="popup"]:checked + label + div {
     position: relative;
     overflow: hidden;
     width: 100%;
-    bottom: 8%;
+    bottom: 9%;
 }
 .contbox h2{
     text-transform: uppercase;
@@ -1305,6 +1305,9 @@ all and (-ms-high-contrast:none) {
     .naru_list {
         left: 40%;
     }
+    .contbox {
+    bottom: 13%;
+}
 }
 
 @media all and (min-width:1023px) and (max-width:1400px) {
@@ -1527,7 +1530,12 @@ all and (-ms-high-contrast:none) {
 }
 
 @media all and (max-width:500px) {
-
+    .hoverbx,.hoverbx1{
+        display: none;
+    }
+    .contbox {
+    bottom: 13%;
+}
     .swiper-button-prev,
     .swiper-button-next {
         visibility: hidden;
