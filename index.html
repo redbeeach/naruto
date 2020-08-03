@@ -101,6 +101,25 @@
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
+                        //반응형
+		breakpointsInverse: true,
+		breakpoints: {
+			// when window width is >= 320px
+			320: {
+				slidesPerView: 2,
+				spaceBetween: 20 //마진값
+			},
+			// when window width is >= 480px
+			480: {
+				slidesPerView: 3,
+				spaceBetween: 30
+			},
+			// when window width is >= 640px
+			640: {
+				slidesPerView: 1,
+				spaceBetween: 0
+			}
+		}
             });
 
 
@@ -328,7 +347,7 @@
         .s5 {
             background: url(images/s51back.png)12% 100% no-repeat;
             background-attachment: fixed;
-            background-size:contain;
+            background-size:cover;
         }
 
 
@@ -763,7 +782,7 @@
                             <div class="naru_Subimg" style="left: -100%;">
                                 <video src="video/%5BReadygo%5DVideo%202020-07-20%2017-32-12.mp4" autoplay muted loop class="s5video"></video>
                             </div>
-                            <div class="test" style="right: -100%; background: url(images/thumb-1920-1010918.png)50% 50% no-repeat;opacity: .8;"></div>
+                            <div class="test" style="right: -100%;"></div>
                             <div class="naruto_Subtxt" style="display: none;">
                                 <p class="naru_Subtxt_title">TV 애니메이션<br>
                                     명장면의 완벽 재현
@@ -776,7 +795,7 @@
                                 <video src="video/%5BReadygo%5DVideo%202020-07-20%2017-41-02.mp4" autoplay muted loop class="s5video"></video>
                             </div>
 
-                            <div class="test" style="right: -100%; background:url(images/e0f4ded91879e46dcd000be6caf00c45.png)no-repeat;background-size: cover;"></div>
+                            <div class="test" style="right: -100%;"></div>
                             <div class="naruto_Subtxt" style="display: none;">
                                 <p class="naru_Subtxt_title">나루토스톰<br>주인공이되자</p>
                                 <p class="naru_Subtxt_txt"><br>독보적인 3D 그래픽을 기반으로 펼쳐진 광할한 세계를 탐험해보자<br>나루토스톰 주인공이 되어 어드벤처 방식으로<br>플레이 할 수 있습니다.</p>
@@ -788,7 +807,7 @@
                                 <video src="video/%5BReadygo%5DVideo%202020-07-20%2017-41-02.mp4" autoplay muted loop class="s5video"></video>
                             </div>
 
-                            <div class="test" style="right: -100%; background:url(images/Naruto-Shippuden-Ultimate-Ninja-Storm-4-Road-to-Boruto.jpg)no-repeat; background-size:cover;"></div>
+                            <div class="test" style="right: -100%;"></div>
                             <div class="naruto_Subtxt" style="display: none;">
                                 <p class="naru_Subtxt_title">함께 하면<br>더 즐겁다</p>
                                 <p class="naru_Subtxt_txt"><br>길드원과 함께 대화하고,플레이하며<br>길드를 성장시켜보세요.<br>
@@ -924,7 +943,7 @@
                         </ul>
                     </div>
                     <div class="col-one-forth">
-                        <h3>Dribbble Widget</h3>
+                        <h3>Dribbble</h3>
                         <ul class="dribble">
                             <li><a href=""><img src="images/dribble1.jpg" alt="dribble 01" /></a></li>
                             <li><a href=""><img src="images/dribble2.jpg" alt="dribble 02" /></a></li>

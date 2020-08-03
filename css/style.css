@@ -458,6 +458,7 @@
     height: 100%;
     float: left;
 }
+
 .img14 {
     background: url(../images/hinata11.png)23% -7% no-repeat;
     width: 100%;
@@ -527,7 +528,7 @@ input[id*="popup"] + label {
 }
 
 input[id*="popup"] + label + div {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -776,7 +777,7 @@ input[id*="popup"]:checked + label + div {
     font-size: 16px;
     font-weight: bold;
     line-height: 30px;
-        letter-spacing: -1px;
+    letter-spacing: -1px;
 }
 
 /*소개 이미지 설정*/
@@ -798,7 +799,8 @@ input[id*="popup"]:checked + label + div {
     right: 0;
     width: 66%;
     height: 100%;
-
+    background: url(../images/thumb-1920-1010918.png)50% 50% no-repeat;
+    opacity: .8;
 }
 
 .cap2 .naru_Subimg {
@@ -814,7 +816,8 @@ input[id*="popup"]:checked + label + div {
     top: 0;
     width: 66%;
     height: 100%;
-
+    background: url(../images/e0f4ded91879e46dcd000be6caf00c45.png)50% 50% no-repeat;
+    background-size: cover;
 }
 
 .cap3 .naru_Subimg {
@@ -831,7 +834,8 @@ input[id*="popup"]:checked + label + div {
     top: 0;
     width: 66%;
     height: 100%;
-
+    background: url(../images/Naruto-Shippuden-Ultimate-Ninja-Storm-4-Road-to-Boruto.jpg)50% 50% no-repeat;
+    background-size: cover;
 }
 
 
@@ -861,9 +865,11 @@ input[id*="popup"]:checked + label + div {
     width: 100%;
     bottom: 9%;
 }
-.contbox h2{
+
+.contbox h2 {
     text-transform: uppercase;
 }
+
 .contbox .conbox1 {
     float: left;
     border: 1px solid red;
@@ -1109,8 +1115,9 @@ footer {
 .col-one-forth:first-child a span {
     margin-left: 6px;
 }
-.col-one-forth:hover:first-child p{
-     color: #c7b299;
+
+.col-one-forth:hover:first-child p {
+    color: #c7b299;
 }
 
 .footer_top h3 {
@@ -1219,13 +1226,43 @@ footer {
 }
 
 @media (max-width:1920px) {
-    .img02 {
+    .img2 {
+        background-position: 23% 50%;
+    }
 
-        padding-right: 0px;
+    .img3 {
+        background-position: 28% 10%;
+    }
+
+    .img5 {
+
+        background-position: 30% 5%;
     }
 
     .img6 {
+
+        background-position: 32% -17%;
         margin-right: 200px;
+    }
+
+    .img7 {
+        background-position: 32% -19%;
+    }
+
+    .img8 {
+        background-position: 30% -15%;
+    }
+
+    .img9 {
+        background-position: 45% -15%;
+    }
+
+    .img12 {
+        background-position: 34% -7%;
+    }
+
+    .img13 {
+        background-position: 27% -7%;
     }
 
     .s5video {
@@ -1233,8 +1270,12 @@ footer {
         width: 430px;
     }
 
-    .contbox .conbox5 {
-        width: 37.66666%;
+    .contbox {
+        bottom: 13%;
+    }
+
+    .contbox .conbox2 {
+        width: 56.777%;
     }
 
     .naru_list {
@@ -1274,8 +1315,6 @@ all and (-ms-high-contrast:none) {
     .slide_button:hover {
         border: 2px solid #f9f9f9;
     }
-
-
 }
 
 @media all and (min-width:1025px) and (max-width:1700px) {
@@ -1305,9 +1344,10 @@ all and (-ms-high-contrast:none) {
     .naru_list {
         left: 40%;
     }
+
     .contbox {
-    bottom: 13%;
-}
+        bottom: 13%;
+    }
 }
 
 @media all and (min-width:1023px) and (max-width:1400px) {
@@ -1372,9 +1412,9 @@ all and (-ms-high-contrast:none) {
 
     }
 
-.textbx {
-    transform: translate(24%, 93%);
-}
+    .textbx {
+        transform: translate(24%, 93%);
+    }
 
     .tit_name {
         font-size: 56px;
@@ -1399,6 +1439,390 @@ all and (-ms-high-contrast:none) {
 
 }
 
+/*태블릿 아이패드 가로*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation: landscape) {
+    * {
+        margin: 0;
+    }
+
+    #home-bg-video {
+        left: 19.5%;
+    }
+
+    .logo1 {
+        left: 146px;
+    }
+
+    .mainpont {
+        left: 172px;
+        top: 430px;
+    }
+
+    .mobox {
+        left: 167px;
+        top: 580px;
+    }
+
+    .texts2 {
+        left: 100px;
+        top: 292px;
+    }
+
+    .textbx {
+        transform: translate(19%, 118%);
+    }
+
+    .imgbox,
+    .imgbox1 {
+        height: 700px;
+    }
+
+    .img1 {
+        width: 90%;
+    }
+
+    .btnbutton1 {
+        padding: 1% 0 0 8%;
+    }
+
+    .img2 {
+        margin-left: 128px;
+    }
+
+    .img3 {
+        margin-left: 135px;
+        background-position: 26% -11%;
+    }
+
+    .img4 {
+        margin-left: 156px;
+    }
+
+    .img5 {
+        margin-left: 191px;
+        background-position: 30% -13%;
+    }
+
+    .img6 {
+        margin-left: 135px;
+    }
+
+    .img7 {
+        margin-left: 69px;
+    }
+
+    .desc_ch,
+    .desc_ch1 {
+        width: 500px;
+    }
+
+    .img8 {
+        margin-left: 79px;
+    }
+
+    .img9 {
+        margin-left: 160px;
+    }
+
+    .img10 {
+        margin-left: 104px;
+    }
+
+    .img11 {
+        margin-left: 124px;
+    }
+
+    .img12 {
+        margin-left: 126px;
+    }
+
+    .img13 {
+        margin-left: 42px;
+    }
+
+    .img14 {
+        margin-left: 150px;
+    }
+
+    .s4 {
+        background-position: -10% 50%;
+    }
+
+    input[id*="popup"] + label {
+        bottom: 52%;
+        left: 48%;
+    }
+
+    .youvideo {
+        width: 843px;
+        height: 491px;
+    }
+
+    input[id*="popup"] + label + div > div > label {
+        transform: translate(350%, -211%);
+    }
+
+    .s5video {
+        margin-left: 61px;
+        height: 586px;
+    }
+
+    .naru_list {
+        padding: 0;
+        left: 41%;
+    }
+
+    .texts2 p {
+        margin-top: 27px;
+    }
+
+    .cap1 .test {
+        background-position: 76% 50%;
+    }
+
+    .contbox .conbox1 {
+        height: 410px
+    }
+
+    .contbox .conbox2 {
+        width: 56.6%;
+        height: 410px;
+    }
+
+    .contbox .conbox3 {
+        width: 31%;
+    }
+
+    .conimgbx1 {
+        background-position: 43% 49%;
+        background-size: auto;
+    }
+
+    .contbox .conbox5 {
+        width: 33.4%;
+        height: 351px;
+    }
+
+    .contbox {
+        bottom: 10%;
+    }
+
+    .conimgbx4 {
+        background-position: 33% 50%
+    }
+
+    .focontainer {
+        padding-top: 85px;
+        left: 20px;
+    }
+
+    .focontainer ul li {
+        width: 225px;
+        margin-right: 0px;
+        padding-left: 22px;
+    }
+
+    .footer_top {
+        left: 53px;
+        top: 37%;
+    }
+
+    .col-one-forth {
+        width: 235px;
+    }
+
+    .col-one-forth:first-child {
+        padding-top: 21px;
+    }
+
+    .footer_bottom .copy {
+        padding-left: 74px;
+    }
+
+    .footer_bottom .designer {
+        display: none;
+    }
+}
+
+/*태블릿 아이패드 세로*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation:portrait) {
+    .textbox {
+        display: none;
+    }
+
+    #home-bg-video {
+        left: -29%;
+    }
+
+    .logo1 {
+        left: 206px;
+    }
+
+    .mainpont {
+        left: 219px;
+    }
+
+    .mobox {
+        left: 110px;
+    }
+
+    .texts2 {
+        left: 74px;
+    }
+
+    .desc_ch .txt_g {
+        font-size: 17px;
+    }
+
+    .desc_g {
+        font-size: 12px;
+    }
+
+    .tit_name {
+        font-size: 40px;
+    }
+
+    .textbx {
+        transform: translate(16%, 138%);
+    }
+
+    .img1 {
+        background-position: 50% 50%;
+        background-size: contain;
+        margin-left: 0;
+    }
+
+    .img2,
+    .img3 {
+        background-position: 50% 50%;
+        background-size: 64%;
+        margin-left: 0;
+    }
+
+    .img4,
+    .img5 {
+        background-size: 50%;
+        background-position: 55% 46%;
+    }
+
+    .img6 {
+        background-position: 58% 52%;
+        background-size: 67%;
+    }
+
+    .img7 {
+        background-position: 95% 53%;
+        background-size: 90%;
+    }
+
+    .img8 {
+        background-position: 44% 55%;
+        background-size: 80%;
+    }
+
+    .img9 {
+        background-position: 74% 55%;
+        background-size: 96%;
+    }
+
+    .img10 {
+        background-position: 81% 56%;
+        background-size: 77%;
+    }
+
+    .img11 {
+        background-size: 55%;
+        background-position: 50% 53%;
+    }
+
+    .img12 {
+        background-size: 79%;
+        background-position: 50% 53%;
+    }
+
+    .img13 {
+        background-size: 97%;
+        background-position: 50% 53%;
+    }
+
+    .img14 {
+        background-size: 40%;
+        background-position: 50% 53%;
+    }
+
+    .s5video {
+        margin-left: 45px;
+        width: 323px;
+    }
+
+    .cap1 .test {
+        background-position: 71% 50%;
+    }
+
+    .contbox .conbox1,
+    .contbox .conbox2,
+    .contbox .conbox3,
+    .contbox .conbox4 {
+        width: 100%;
+        height: 200px;
+    }
+
+    .contbox .conbox5 {
+        width: 100%;
+        height: 213px;
+    }
+
+    .contbox {
+        bottom: 12%;
+    }
+
+    .conimgbx3 {
+        background-position: 50% 37%;
+    }
+
+    .contbox .hoverbx,
+    .contbox .hoverbx1 {
+        display: none;
+    }
+
+    .focontainer {
+        padding-top: 43px;
+        left: 13%;
+    }
+
+    .footer_top {
+        left: 7%;
+        width: 0;
+    }
+
+    .col-one-forth {
+        width: 10%;
+        margin-right: 0px;
+    }
+
+    .footer_bottom .designer {
+        display: none;
+    }
+
+    .footer_bottom .copy {
+        padding-left: 58px;
+    }
+
+    .youvideo {
+        width: 600px;
+        height: 400px;
+    }
+
+    input[id*="popup"] + label + div > div > label {
+        transform: translate(124%, -133%);
+    }
+
+    input[id*="popup"] + label {
+        bottom: 57%;
+        left: 48%;
+    }
+}
+
 @media all and (max-width:739px) {
     #content1 {
         height: 900px;
@@ -1421,9 +1845,11 @@ all and (-ms-high-contrast:none) {
     .textbx {
         transform: translate(14%, 147%);
     }
-.img1 {
-     margin-left:0; 
-}
+
+    .img1 {
+        margin-left: 0;
+    }
+
     .desc_ch,
     .desc_ch1 {
         width: 301px;
@@ -1530,12 +1956,16 @@ all and (-ms-high-contrast:none) {
 }
 
 @media all and (max-width:500px) {
-    .hoverbx,.hoverbx1{
+
+    .hoverbx,
+    .hoverbx1 {
         display: none;
     }
+
     .contbox {
-    bottom: 13%;
-}
+        bottom: 13%;
+    }
+
     .swiper-button-prev,
     .swiper-button-next {
         visibility: hidden;
@@ -1599,42 +2029,52 @@ all and (-ms-high-contrast:none) {
         background: url(../images/th870.png)58% 62% no-repeat;
         background-size: 49%
     }
+
     .img6 {
-    background: url(/../images/madara11.png)53% 46% no-repeat;
-    background-size: 62%;
-}
-    .img7 {
-    background: url(../images/obito11.png)73% 50% no-repeat;
-    background-size: 86%;
+        background: url(/../images/madara11.png)53% 46% no-repeat;
+        background-size: 62%;
     }
+
+    .img7 {
+        background: url(../images/obito11.png)73% 50% no-repeat;
+        background-size: 86%;
+    }
+
     .img8 {
-    background: url(../images/itach11.png)46% 49% no-repeat;
-    background-size: 74%;
-}
-.img9 {
-    background: url(../images/pain.png)54% 40% no-repeat;
-    background-size: 90%;
-}
+        background: url(../images/itach11.png)46% 49% no-repeat;
+        background-size: 74%;
+    }
+
+    .img9 {
+        background: url(../images/pain.png)54% 40% no-repeat;
+        background-size: 90%;
+    }
+
     .img10 {
-    background: url(../images/deidara22.png)63% 49% no-repeat;
-    background-size: 76%;
-}
+        background: url(../images/deidara22.png)63% 49% no-repeat;
+        background-size: 76%;
+    }
+
     .img11 {
-    background: url(../images/orug.png)42% 46% no-repeat;
-    background-size: 50%;
-}
+        background: url(../images/orug.png)42% 46% no-repeat;
+        background-size: 50%;
+    }
+
     .img12 {
-    background: url(../images/jiraiya.png)57% 45% no-repeat;
-    background-size: 78%;
-}
+        background: url(../images/jiraiya.png)57% 45% no-repeat;
+        background-size: 78%;
+    }
+
     .img13 {
-    background: url(../images/gaara.png)72% 46% no-repeat;
-    background-size: 92%;
-}
+        background: url(../images/gaara.png)72% 46% no-repeat;
+        background-size: 92%;
+    }
+
     .img14 {
-    background: url(../images/hinata11.png)56% 46% no-repeat;
-    background-size: 40%;
-}
+        background: url(../images/hinata11.png)56% 46% no-repeat;
+        background-size: 40%;
+    }
+
     iframe {
         width: 400px;
     }
@@ -1650,7 +2090,8 @@ all and (-ms-high-contrast:none) {
     #support-grid ul li:first-child a {
         padding: 11px;
     }
-    #tab{
+
+    #tab {
         margin-left: 78px;
     }
 
@@ -1762,12 +2203,14 @@ all and (-ms-high-contrast:none) {
         margin-left: 42px;
 
     }
-    .footer_bottom{
+
+    .footer_bottom {
         left: 5%;
     }
+
     .col-one-forth:last-child {
-    display: none;
-}
+        display: none;
+    }
 
 }
 
