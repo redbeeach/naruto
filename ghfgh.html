@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Naruto storm4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="stu.css">
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+<!--    <link rel="stylesheet" href="css/swiper.min.css">-->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400"rel="stylesheet">
+
+    <script>
+        $(function() {
+            $("header").load("header.html");
+        });
+    </script>
+    <script type="text/javascript">
+        $(function() {
+
+            //    메뉴 누르면 해당 컨텐츠로 이동
+            $("header .menu-item").click(function(e) {
+                e.preventDefault();
+
+                var tg = $(this);
+                var i = tg.index();
+
+                var section = $(".section").eq(i);
+                var tt = section.offset().top;
+
+                $('html, body').stop().animate({
+                    scrollTop: tt
+                });
+            });
+            $(window).scroll(function() {
+                var sct = $(window).scrollTop();
+                var bg_color = $('header .menu-item');
+
+                $(".section").each(function() {
+                    var tg = $(this);
+                    var i = tg.index();
+
+                    if (tg.offset().top <= sct + 114) {
+                        // content별 메뉴명 색상을 바꿔준다.
+                        $("header .menu-item").removeClass('on');
+                        $("header .menu-item").eq(i).addClass('on');
+                    }
+                });
+            });
+
+            $(".section").on("mousewheel", function(e) {
+                e.preventDefault();
+
+                var box6Top = $('.s8').offset().top;
+
+                var delta = 0;
+
+                delta = e.originalEvent.wheelDelta / 120;
+                var moveTop = null;
+                if (delta < 0) {
+                    if ($(this).next() != undefined) {
+                        new WOW().init();
+                        try {
+                            moveTop = $(this).next().offset().top;
+                        } catch (e) {}
+                    }
+                } else {
+                    if ($(this).prev() != undefined) {
+                        new WOW().init();
+                        try {
+                            moveTop = $(this).prev().offset().top;
+                        } catch (e) {}
+                    }
+                }
+                $("html,body").stop().animate({
+                    "scrollTop": moveTop + "px"
+                }, 800);
+
+                if (moveTop == box6Top) {
+                    return;
+                }
+            });
+        });
+    </script>
+
+    <style>
+        /*defult setting*/
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            font-family: 'NanumSquareR';
+            box-sizing: border-box;
+
+        }  
+    
+    </style>
+
+</head>
+
+<body>
+    <header></header>
+    <div id="wrap">
+        <div class="section s1">
+            <video id="home-bg-video" muted autoplay loop>
+                <source src="video/narutomain.mp4" type="video/mp4">
+            </video>
+            <div class="backimg"></div>
+
+            <div class="content">
+                <div class="mainbox">
+                    <h1 class="logo1 wow fadeInLeft"></h1>
+                    <p class="mainpont wow fadeInLeft" data-wow-delay=".5s"><span>모험그이상,초대형어드벤처</span><br>
+                        모바일로 탄생한 -나루토- <br>
+                        지금 다운로드 받으세요
+                    </p>
+                    <div class="mobox">
+                        <a href="#" class="ios"></a>
+                        <a href="#" class="aos"></a>
+                        <a href="sub1.html" class="btn" target="_blank">DOWNLOAD</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!--        s2------------------>
+        <div class="section s2">
+            <div class="content">
+                <div class="texts2">
+                    <span>2020년 초대형 기대작</span>
+                    <h1 class="tite wow fadeInLeft" data-wow-delay=".3s">나루토 스톰4 : SHIPPUDEN</h1>
+                    <p class="wow fadeInLeft" data-wow-delay=".8s" style="font-size: 20px;">옛날에 괴물 구미호가 있었다. 꼬리가 아홉달린 구미호였다.<br> 그 꼬리를 한 번 휘두를 때마다 산이 무너지고 해일이 덮쳤으니,<br> 사람들은 고민 끝에 닌자들을 불러 모았다. 그 중 한 닌자가 <br>괴물 구미호를 봉인하지만, 목숨을 잃고 만다. <br>그 닌자는 "4대호카게" 라고 한다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

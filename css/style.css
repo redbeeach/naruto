@@ -9,6 +9,33 @@
     height: auto;
 }
 
+#wrap {
+    width: 100%;
+    height: 100%;
+    min-width: 1180px;
+    position: relative;
+}
+
+.section {
+    width: 100%;
+    height: 100%;
+    min-width: 1180px;
+    position: relative;
+    color: #ffffff;
+    font-size: 24pt;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.s1 {
+    width: 100%;
+    height: 100%;
+    /*    min-width: 1180px;*/
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
 .logo1 {
     position: absolute;
     top: 200px;
@@ -63,9 +90,10 @@
     position: relative;
     top: -20px;
     font-size: 20px;
-    padding: 16px 32px;
+    padding: 19px 31px;
     cursor: pointer;
     transition: 800ms ease all;
+    display: inline-block;
 }
 
 .btn:before,
@@ -103,10 +131,8 @@
 
 /*----------s2------------*/
 .texts2 {
-    width: 1000px;
-    position: absolute;
-    top: 383px;
-    left: 310px;
+    width: 70%;
+    margin: 302px auto;
     color: #000;
     letter-spacing: -2px;
 }
@@ -117,9 +143,9 @@
     margin-top: 24px;
 }
 
-.texts2 .tite p {
-    text-align: center;
-
+.texts2 p {
+    font-size: 25px;
+    line-height: 30px;
 }
 
 /*------------s3----------*/
@@ -230,7 +256,13 @@
 }
 
 .carilist {
-    height: auto;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    min-width: 1180px;
+    overflow: hidden;
+    padding: 67px;
+    position: relative;
 }
 
 .textbox {
@@ -254,115 +286,51 @@
 /*등장인물 설명*/
 .cont,
 .cont1 {
-    width: 100%;
+    width: auto;
     float: left;
+    min-width: 1180px;
+    overflow: hidden;
 }
-
 .textbx {
-    width: 40%;
     float: left;
-    transform: translate(50%, 147%);
+    padding-top: 323px;
+    font-size: 15px;
 }
 
 .tit_name {
     font-size: 70px;
     color: #000;
-    width: 500px;
     padding-bottom: 30px;
-}
-
-.voice_wrap {
-    overflow: hidden;
-    height: 68px;
-    margin: 65px 0 0 39px;
-    width: 500px;
-}
-
-.voice_actor {
-    float: left;
-}
-
-.tit_actor {
-    float: left;
-    width: 46px;
-    position: absolute;
-    line-height: 34px;
-    color: #000;
-    font-size: 23px;
-
-
-}
-
-.info_actor {
-    display: block;
-    overflow: hidden;
-    padding-left: 9px;
-    font-size: 0;
-}
-
-.txt_actor {
-    display: inline-block;
-    line-height: 34px;
-    width: 100px;
-    color: #000;
-    vertical-align: top;
-}
-
-.list_voice {
-    display: inline-block;
-    height: 21px;
-    margin: 7px 0 0 8px;
-    vertical-align: top;
-}
-
-.list_voice .btn_voice {
-    display: block;
-    overflow: hidden;
-    width: 21px;
-    height: 21px;
-    border-radius: 50%;
-    background-color: #c2c2c2;
-    background: url(../images/ico_voice.png)no-repeat;
-    background-position: 50% 50%;
-
-}
-
-.list_voice li + li {
-    margin-left: 4px;
-}
-
-.desc_ch,
-.desc_ch1 {
-
-    width: 600px;
 }
 
 .desc_g {
     line-height: 32px;
     color: #636363;
-
 }
 
 .desc_g span {
     color: #000;
     font-weight: 800;
-
 }
 
 .desc_ch .txt_g {
     display: block;
     color: 32px;
-    width: 230px;
     font-size: 20px;
 }
 
 /*등장인물 이미지 */
-.imgbox,
-.imgbox1 {
-    width: 60%;
-    height: 900px;
+.imgbox01 {
+    padding: 0;
     float: left;
     z-index: 1;
+}
+
+.imgbox,
+.imgbox1 {
+    float: left;
+    z-index: 1;
+    padding-left: 171px;
 }
 
 .img1 {
@@ -458,6 +426,7 @@
     height: 100%;
     float: left;
 }
+
 .img14 {
     background: url(../images/hinata11.png)23% -7% no-repeat;
     width: 100%;
@@ -711,8 +680,6 @@ input[id*="popup"]:checked + label + div {
 }
 
 .s5video {
-    margin-left: 610px;
-    width: 430px;
     height: 745px;
 }
 
@@ -754,8 +721,12 @@ input[id*="popup"]:checked + label + div {
 }
 
 .naru_setting .naru_Subimg {
+    position: absolute;
     float: left;
     width: 60%;
+    margin: 99px auto;
+    z-index: 1;
+    padding-left: 23%;
 }
 
 .naru_setting .naruto_Subtxt {
@@ -776,7 +747,7 @@ input[id*="popup"]:checked + label + div {
     font-size: 16px;
     font-weight: bold;
     line-height: 30px;
-        letter-spacing: -1px;
+    letter-spacing: -1px;
 }
 
 /*소개 이미지 설정*/
@@ -786,12 +757,14 @@ input[id*="popup"]:checked + label + div {
 }
 
 /*소개 클릭 이벤트*/
+/*
 .cap1 .naru_Subimg {
     position: absolute;
     top: 10%;
     left: 0px;
     z-index: 1;
 }
+*/
 
 .cap1 .test {
     position: absolute;
@@ -801,12 +774,14 @@ input[id*="popup"]:checked + label + div {
 
 }
 
+/*
 .cap2 .naru_Subimg {
     position: absolute;
     top: 10%;
     left: -100%;
     z-index: 1;
 }
+*/
 
 .cap2 .test {
     position: absolute;
@@ -817,6 +792,7 @@ input[id*="popup"]:checked + label + div {
 
 }
 
+/*
 .cap3 .naru_Subimg {
     position: absolute;
     top: 10%;
@@ -824,6 +800,7 @@ input[id*="popup"]:checked + label + div {
     z-index: 1;
 
 }
+*/
 
 .cap3 .test {
     position: absolute;
@@ -859,16 +836,20 @@ input[id*="popup"]:checked + label + div {
     position: relative;
     overflow: hidden;
     width: 100%;
-    bottom: 9%;
+    height: 100%;
 }
-.contbox h2{
+.bt{
+    height: 50%
+}
+
+.contbox h2 {
     text-transform: uppercase;
 }
+
 .contbox .conbox1 {
     float: left;
     border: 1px solid red;
     width: 43%;
-    height: 460px;
     position: relative;
     overflow: hidden;
 }
@@ -877,7 +858,6 @@ input[id*="popup"]:checked + label + div {
     float: left;
     border: 1px solid red;
     width: 56.66666%;
-    height: 460px;
     position: relative;
     overflow: hidden;
 }
@@ -886,7 +866,6 @@ input[id*="popup"]:checked + label + div {
     float: left;
     border: 1px solid red;
     width: 26%;
-    height: 478px;
     position: relative;
     overflow: hidden;
 }
@@ -895,7 +874,6 @@ input[id*="popup"]:checked + label + div {
     float: left;
     border: 1px solid red;
     width: 35%;
-    height: 478px;
     position: relative;
     overflow: hidden;
 }
@@ -903,8 +881,7 @@ input[id*="popup"]:checked + label + div {
 .contbox .conbox5 {
     float: left;
     border: 1px solid red;
-    width: 38.66666%;
-    height: 478px;
+    width: 37.66666%;
     position: relative;
     overflow: hidden;
 }
@@ -1035,12 +1012,18 @@ footer {
 }
 
 .focontainer {
-    height: 489px;
+    /*
     padding-top: 142px;
+        padding-left: 26%;
     box-sizing: border-box;
-    position: absolute;
-    top: 0;
-    left: 28%;
+    width: 100%;
+    margin: 0 auto;
+    min-width: 1180px;
+*/
+    display: inline-block;
+    width: 100%;
+    margin: 104px auto;
+    padding-left: 27%;
 }
 
 .focontainer ul li {
@@ -1069,10 +1052,10 @@ footer {
 }
 
 .footer_top {
-    position: absolute;
-    top: 50%;
-    left: 28%;
-
+    display: inline-block;
+    width: 100%;
+    margin: 0px auto;
+    padding-left: 28%;
 }
 
 .col-one-forth {
@@ -1109,8 +1092,9 @@ footer {
 .col-one-forth:first-child a span {
     margin-left: 6px;
 }
-.col-one-forth:hover:first-child p{
-     color: #c7b299;
+
+.col-one-forth:hover:first-child p {
+    color: #c7b299;
 }
 
 .footer_top h3 {
@@ -1185,7 +1169,7 @@ footer {
 }
 
 .container {
-    width: 1920px;
+    /*    width: 1920px;*/
     margin: 0 auto;
 }
 
@@ -1218,54 +1202,16 @@ footer {
     margin: 0 8px;
 }
 
-@media (max-width:1920px) {
-    .img02 {
-
-        padding-right: 0px;
-    }
-
-    .img6 {
-        margin-right: 200px;
-    }
-
-    .s5video {
-        margin-left: 350px;
-        width: 430px;
-    }
-
-    .contbox .conbox5 {
-        width: 37.66666%;
-    }
-
-    .naru_list {
-        padding: 43px 0 0 0;
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-        position: relative;
-        bottom: 14%;
-        ;
-        left: 33%;
-        z-index: 99999;
+@media all and (max-width:1400px) {
+    .footer_top {
+        padding-left: 12%;
     }
 
     .focontainer {
-        height: 489px;
-        padding-top: 142px;
-        box-sizing: border-box;
-        position: absolute;
-        top: 0;
-        left: 20%;
+        padding-left: 10%;
     }
-
-    .footer_top {
-        left: 20%;
-    }
-}
-
-@media (max-width:1191px) {
-    .contbox .conbox2 {
-        width: 55%;
+    .contbox .conbox5 {
+        width: 38%;
     }
 }
 
@@ -1305,9 +1251,7 @@ all and (-ms-high-contrast:none) {
     .naru_list {
         left: 40%;
     }
-    .contbox {
-    bottom: 13%;
-}
+
 }
 
 @media all and (min-width:1023px) and (max-width:1400px) {
@@ -1333,6 +1277,9 @@ all and (-ms-high-contrast:none) {
     .tit_name {
         font-size: 56px;
     }
+        .ob1{
+        padding-left: 129px;
+    }
 
 }
 
@@ -1342,10 +1289,12 @@ all and (-ms-high-contrast:none) {
         width: 6%;
     }
 
+    /*
     .s5video {
         margin-left: 230px;
         width: 430px;
     }
+*/
 
     .naruto_Subtxt {
         top: 0px;
@@ -1372,9 +1321,12 @@ all and (-ms-high-contrast:none) {
 
     }
 
-.textbx {
-    transform: translate(24%, 93%);
-}
+    /*
+
+    .textbx {
+        transform: translate(24%, 93%);
+    }
+*/
 
     .tit_name {
         font-size: 56px;
@@ -1399,31 +1351,199 @@ all and (-ms-high-contrast:none) {
 
 }
 
+@media all and (max-width:1180px) {
+    #wrap{
+        min-width: auto;
+    }
+    .section {
+        min-width: auto;
+    }
+
+    #home-bg-video {
+        min-width: auto;
+    }
+
+    .cont,
+    .cont1 {
+        min-width: auto;
+        width: auto;
+/*        padding: 91px;*/
+/*        padding: 0px 83px;*/
+    }
+    .imgbox,
+    .imgbox1 {
+        padding: 0;
+    }
+        .contbox .conbox1 {
+        width: 41%;
+    }
+    .carilist {
+    width: 100%;
+        min-width: auto;
+    }
+    .imgbox01 {
+    width: 565px;
+}
+}
+
+@media screen and (max-width:768px) {
+    #wrap {
+        min-width: 100%;
+    }
+
+    .section {
+        min-width: 100%;
+    }
+
+    .logo1 {
+        left: 123px;
+        width: 300px;
+    }
+
+    .btn {
+        top: 0;
+    }
+
+    .mobox {
+        left: 183px;
+        top: 570px;
+    }
+
+    .mainpont {
+        left: 139px;
+        top: 424px;
+        font-size: 15px;
+        text-align: center;
+        color: #fff;
+        text-shadow: 1px 2px 1px rgba(0, 0, 0, .4);
+    }
+
+    .mainpont > span {
+        font-size: 20px;
+    }
+
+    .texts2 {
+        font-size: 14px;
+    }
+
+    .texts2 > p {
+        font-size: 14px;
+    }
+
+    .naru_list {
+        width: 100%;
+        padding: 0 159px;
+        bottom: 9%;
+        left: 0;
+    }
+
+    .cont,
+    .cont1 {
+        width: 100%;
+    }
+
+    .contbox .conbox1,
+    .contbox .conbox2,
+    .contbox .conbox3,
+    .contbox .conbox4,
+    .contbox .conbox5 {
+        width: 100%;
+        height: 184px;
+    }
+
+    .textbox {
+        display: none;
+    }
+
+    .textbx {
+        float: left;
+        padding-top: 0;
+        padding-left: 73px;
+    }
+
+    .imgbox{
+        width: 100%;
+       padding: 0px 113px;
+    }
+    .imgbox1{
+        padding: 0px 42px;
+        width: 100%;
+    }
+    .footer_bottom {
+        font-size: 8px;
+    }
+
+    .footer_bottom .copy {
+        padding-left: 40px;
+    }
+
+    .s7 {
+        background-position: 47% 51%;
+    }
+
+    .col-one-forth:nth-child(2),
+    .col-one-forth:nth-child(3),
+    .col-one-forth:nth-child(4) {
+        display: none;
+    }
+
+    .btnbutton1 {
+        z-index: 4;
+        padding: 10px 33px;
+    }
+
+    .desc_ch,
+    .desc_ch1 {
+        display: none;
+    }
+
+    .carilist {
+        width: 100%;
+        padding: 0;
+    }
+    .tit_name{
+        display: none;
+    }
+    .imgbox,
+    .imgbox1 {
+        float: left;
+        z-index: 1;
+    }
+
+    .focontainer {
+        margin-bottom: 0;
+    }
+
+    .col-one-forth {
+        width: 84%;
+
+    }
+
+    .focontainer ul li {
+        width: auto;
+    }
+}
+
 @media all and (max-width:739px) {
+
     #content1 {
         height: 900px;
     }
 
+    /*
     .s5video {
         margin-left: 145px;
         width: 430px;
     }
-
-    .texts2 {
-        width: 500px;
-        left: 99px;
-    }
-
+*/
     .tit_name {
         font-size: 40px;
     }
 
-    .textbx {
-        transform: translate(14%, 147%);
+    .img1 {
+        margin-left: 0;
     }
-.img1 {
-     margin-left:0; 
-}
+
     .desc_ch,
     .desc_ch1 {
         width: 301px;
@@ -1438,7 +1558,7 @@ all and (-ms-high-contrast:none) {
         text-align: center;
         font-size: 18px;
         line-height: 20px;
-        padding-top: 10px;
+        padding: 10px 26px;
     }
 
     .naru_Subtxt_txt {
@@ -1453,25 +1573,14 @@ all and (-ms-high-contrast:none) {
         line-height: 14px;
     }
 
-    .naru_list {
-        width: 100%;
-
-    }
-
     .naru_list li {
         width: 11%;
         font-size: 14px;
     }
 
-    .naruto_Sublist {
-        margin-top: 10px;
-        overflow: hidden;
-    }
-
     .game_Box {
         width: 90%;
     }
-
 
     .naru_setting .naru_Subimg {
         float: none;
@@ -1507,504 +1616,21 @@ all and (-ms-high-contrast:none) {
         color: #f9f9f9
     }
 
-    .logo1 {
-        left: 135px;
-    }
-
-    .mainpont {
-        top: 434px;
-        left: 150px;
-    }
-
-    .mobox {
-        left: 12px;
-    }
-
-    .btn_list {
-        opacity: 0;
-    }
-
     iframe {
         width: 430px;
     }
 }
 
 @media all and (max-width:500px) {
-    .hoverbx,.hoverbx1{
-        display: none;
-    }
-    .contbox {
-    bottom: 13%;
-}
-    .swiper-button-prev,
-    .swiper-button-next {
-        visibility: hidden;
-    }
-
-    .logo1 {
-        left: 85px;
-    }
-
-    .mainpont {
-        left: 98px;
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .mobox {
-        left: 170px;
-    }
-
-    .ios {
-        display: block;
-    }
-
-    .aos {
-        display: block;
-    }
-
-    .btn {
-        top: 8px;
-        margin-left: 0;
-    }
-
-    .texts2 {
-        width: 332px;
-        top: 280px;
-        font-size: 22px;
-        text-align: center;
-    }
-
-    .img1 {
-        background: url(../images/870870.png)50% 50% no-repeat;
-        background-size: 100%;
-    }
-
-    .img2 {
-        background: url(../images/sa870.png)40% 61% no-repeat;
-        background-size: 55%;
-    }
-
-    .img3 {
-        background: url(../images/sk870.png)54% 56% no-repeat;
-        background-size: 58%
-    }
-
-    .img4 {
-        background: url(../images/ka870.png)50% 62% no-repeat;
-        background-size: 49%
-    }
-
-    .img5 {
-        background: url(../images/th870.png)58% 62% no-repeat;
-        background-size: 49%
-    }
-    .img6 {
-    background: url(/../images/madara11.png)53% 46% no-repeat;
-    background-size: 62%;
-}
-    .img7 {
-    background: url(../images/obito11.png)73% 50% no-repeat;
-    background-size: 86%;
-    }
-    .img8 {
-    background: url(../images/itach11.png)46% 49% no-repeat;
-    background-size: 74%;
-}
-.img9 {
-    background: url(../images/pain.png)54% 40% no-repeat;
-    background-size: 90%;
-}
-    .img10 {
-    background: url(../images/deidara22.png)63% 49% no-repeat;
-    background-size: 76%;
-}
-    .img11 {
-    background: url(../images/orug.png)42% 46% no-repeat;
-    background-size: 50%;
-}
-    .img12 {
-    background: url(../images/jiraiya.png)57% 45% no-repeat;
-    background-size: 78%;
-}
-    .img13 {
-    background: url(../images/gaara.png)72% 46% no-repeat;
-    background-size: 92%;
-}
-    .img14 {
-    background: url(../images/hinata11.png)56% 46% no-repeat;
-    background-size: 40%;
-}
-    iframe {
-        width: 400px;
-    }
-
-    .btnbutton1 {
-        padding: 1% 0 0 6%;
-    }
-
-    .textbox {
-        opacity: 0;
-    }
-
-    #support-grid ul li:first-child a {
-        padding: 11px;
-    }
-    #tab{
-        margin-left: 78px;
-    }
-
-    .cont,
-    .cont1 {
-        width: 100%;
-        float: left;
-        padding: 0;
-    }
-
-    .imgbox,
-    .imgbox1 {
-        padding: 0;
-        width: 100%;
-    }
-
-    .textbx {
-        display: none;
-    }
-
-    .img1 {
-        width: 100%;
-        margin: 0;
-    }
-
-    input[id*="popup"] + label {
-        bottom: 60%;
-        left: 46%;
-    }
-
-    input[id*="popup"] + label + div > div {
-        width: 476px;
-        height: 300px;
-    }
-
-    .youvideo {
-        width: 476px;
-        height: 300px;
-    }
-
-    .s5video {
-        margin-left: 36px;
-    }
-
-    .naru_list li {
-        width: 25%;
-    }
-
-    .naru_list {
-        width: 50%;
-        left: 1%;
-    }
-
-    .contbox .conbox1 {
-        width: 100%;
-        height: 183px;
-    }
-
-    .contbox .conbox2 {
-        width: 100%;
-        height: 183px;
-    }
-
-    .contbox .conbox3 {
-        width: 100%;
-        height: 183px;
-    }
-
-    .contbox .conbox4 {
-        width: 100%;
-        height: 183px;
-    }
-
-    .contbox .conbox5 {
-        width: 100%;
-        height: 183px;
-    }
-
-    .contbox .hoverbx {
-        top: 0;
-    }
-
-    .contbox .hoverbx1 {
-        top: 0;
-    }
-
-    .conimgbx2 {
-        background: url(../images/thumb-1920-1010918.png)0 50% no-repeat;
-        background-size: cover;
-    }
-
-    .conimgbx3 {
-        background: url(../images/s63.png)0 50% no-repeat;
-        background-size: cover;
-    }
-
-    .focontainer {
-        display: none;
-    }
-
-    .footer_top {
-        top: 0;
-        left: 0;
-    }
-
-    .col-one-forth {
-        width: 100%;
-        margin-right: 0px;
-        margin-left: 42px;
-
-    }
-    .footer_bottom{
-        left: 5%;
-    }
-    .col-one-forth:last-child {
-    display: none;
-}
-
-}
-
-/*ios 6,7*/
-@media all and (max-width:450px) {
-
-    .swiper-button-prev,
-    .swiper-button-next {
-        visibility: hidden;
-    }
-
-    .s1 > video {
-        display: none;
-    }
-
-    .s1 {
-        background: url(../images/81XNPmPXK4L._AC_SY741_.jpg)39% 100%;
-        width: 100%;
-        height: 100%;
-    }
-
-    .logo1 {
-        left: 60px;
-        top: 100px;
-        width: 300px;
-    }
-
-    .mainpont {
-        left: 35px;
-        top: 285px;
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .mobox {
-        left: 97px;
-        top: 419px;
-    }
-
-    .ios {
-        display: block;
-    }
-
-    .aos {
-        display: block;
-    }
-
-    .btn {
-        /*        display: block;*/
-        margin-left: 0;
-    }
-
-    .texts2 {
-        width: 332px;
-        left: 25px;
-        top: 131px;
-        font-size: 22px;
-        text-align: center;
-    }
-
-    .img1 {
-        background: url(../images/870870.png)50% 20% no-repeat;
-        background-size: 100%;
-    }
-
-    .img2 {
-        background: url(../images/sa870.png)40% 20% no-repeat;
-        background-size: 55%;
-    }
-
-    .img3 {
-        background: url(../images/sk870.png)54% 19% no-repeat;
-        background-size: 58%
-    }
-
-    .img4 {
-        background: url(../images/ka870.png)50% 18% no-repeat;
-        background-size: 49%
-    }
-
-    .img5 {
-        background: url(../images/th870.png)58% 20% no-repeat;
-        background-size: 49%
-    }
-
-    iframe {
-        width: 400px;
-    }
-
-    .btnbutton1 {
-        padding: 1% 0 0 6%;
-    }
-
-    .textbox {
-        opacity: 0;
-    }
-
-    #support-grid ul li:first-child a {
-        padding: 11px;
-    }
-
-    .cont,
-    .cont1 {
-        width: 100%;
-        float: left;
-        padding: 0;
-    }
-
-    .imgbox,
-    .imgbox1 {
-        padding: 0;
-        width: 100%;
-    }
-
-    .textbx {
-        display: none;
-    }
-
-    .img1 {
-        width: 100%;
-        margin: 0;
-    }
-
-    input[id*="popup"] + label {
-        bottom: 60%;
-        left: 46%;
-    }
-
-    input[id*="popup"] + label + div > div {
-        width: 476px;
-        height: 300px;
-    }
-
-    .youvideo {
-        width: 476px;
-        height: 300px;
-    }
-
-    .s5video {
-        margin-left: 36px;
-        width: 220px;
-        height: 570px;
-    }
-
     .naru_setting .naru_Subimg {
-        height: 70%;
+        padding-left: 11%;
     }
 
-    .naru_list li {
-        width: 25%;
+    .cap1 .naruto_Subtxt {
+        margin: 0 auto;
     }
 
-    .naru_list {
-        width: 50%;
-    }
-
-    .contbox {
-        bottom: 28%;
-    }
-
-    .contbox .bt {
-        width: 100%;
-        height: 135px;
-    }
-
-    .contbox .hoverbx {
-        top: 0;
-    }
-
-    .contbox .hoverbx1 {
-        top: 0;
-    }
-
-    .conimgbx2 {
-        background: url(../images/thumb-1920-1010918.png)0 50% no-repeat;
-        background-size: cover;
-    }
-
-    .conimgbx3 {
-        background: url(../images/s63.png)0 50% no-repeat;
-        background-size: cover;
-    }
-
-}
-
-/*ios se ===========*/
-@media all and (max-width:350px) {
-    .s1 > video {
+    .footer_bottom .designer {
         display: none;
-    }
-
-    .s1 {
-        background: url(../images/81XNPmPXK4L._AC_SY741_.jpg)39% 100%;
-        width: 100%;
-        height: 100%;
-    }
-
-    .logo1 {
-        left: 46px;
-        top: 70px;
-        width: 270px;
-    }
-
-    .mainpont {
-        top: 264px;
-        left: 8px;
-        font-size: 15px;
-        text-align: center;
-    }
-
-    .mobox {
-        left: 75px;
-        top: 363px;
-    }
-
-    .btn_list {
-        opacity: 0;
-    }
-
-    .ios {
-        display: block;
-    }
-
-    .aos {
-        display: block;
-    }
-
-    .btn {
-        display: block;
-        margin-left: 0;
-    }
-
-    .texts2 {
-        width: 300px;
-        left: 10px;
-        top: 157px;
-        font-size: 20px;
-        text-align: center;
     }
 }

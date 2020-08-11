@@ -608,3 +608,13 @@ button.swiper-pagination-bullet {
     left: auto;
 }
 }
+@media (max-width:786px){
+    .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: 61%;
+    left: auto;
+}
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    left: 24%;
+    right: auto;
+}
+}

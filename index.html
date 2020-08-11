@@ -5,6 +5,14 @@
     <meta charset="UTF-8">
     <title>Naruto storm4</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+    
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -19,7 +27,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400"rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400" rel="stylesheet">
 
     <script>
         $(function() {
@@ -254,19 +262,6 @@
 
         }
 
-        #wrap {
-            width: 100%;
-            height: 100%;
-            position: relative;
-        }
-
-        .section {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            color: #ffffff;
-            font-size: 24pt;
-        }
 
         .content {
             width: 100%;
@@ -308,7 +303,8 @@
         }
 
         .s3 {
-            background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+            background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #ebf8)
+/*            background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);*/
 
         }
 
@@ -328,7 +324,7 @@
         .s5 {
             background: url(images/s51back.png)12% 100% no-repeat;
             background-attachment: fixed;
-            background-size:contain;
+            background-size: contain;
         }
 
 
@@ -359,7 +355,9 @@
     <header></header>
     <div id="wrap">
         <div class="section s1">
-            <video src="video/narutomain.mp4" id="home-bg-video" muted autoplay loop></video>
+            <video id="home-bg-video" muted autoplay loop>
+                <source src="video/narutomain.mp4" type="video/mp4">
+            </video>
 
             <div class="content">
                 <div class="mainbox">
@@ -383,7 +381,7 @@
                 <div class="texts2">
                     <span>2020년 초대형 기대작</span>
                     <h1 class="tite wow fadeInLeft" data-wow-delay=".3s">나루토 스톰4 : SHIPPUDEN</h1>
-                    <p class="wow fadeInLeft" data-wow-delay=".8s" style="font-size: 20px;">옛날에 괴물 구미호가 있었다. 꼬리가 아홉달린 구미호였다.<br> 그 꼬리를 한 번 휘두를 때마다 산이 무너지고 해일이 덮쳤으니,<br> 사람들은 고민 끝에 닌자들을 불러 모았다. 그 중 한 닌자가 <br>괴물 구미호를 봉인하지만, 목숨을 잃고 만다. <br>그 닌자는 "4대호카게" 라고 한다.</p>
+                    <p class="wow fadeInLeft" data-wow-delay=".8s">옛날에 괴물 구미호가 있었다. 꼬리가 아홉달린 구미호였다.<br> 그 꼬리를 한 번 휘두를 때마다 산이 무너지고 해일이 덮쳤으니,<br> 사람들은 고민 끝에 닌자들을 불러 모았다. 그 중 한 닌자가 <br>괴물 구미호를 봉인하지만, 목숨을 잃고 만다. <br>그 닌자는 "4대호카게" 라고 한다.</p>
                 </div>
             </div>
         </div>
@@ -416,9 +414,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="imgbox">
-                                            <div class="img1 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".5s">
-                                            </div>
+                                        <div class="imgbox01">
+                                            <img src="images/870870.png" alt="">
                                         </div>
                                     </div>
 
@@ -432,14 +429,13 @@
                                             <div class="tit_name wow fadeInLeft">우치하사스케</div>
                                             <div class="desc_ch">
                                                 <div class="desc_g"><span class="txt_g">&lt;우치하 일족의 당주&gt;</span>
-                                                    <div>우치하 일족의 최후의 생존자 나루토의 최대의 라이벌이자 친구.<br>천부적인 소질을 가졌으며형에게 배신을 당해 복수심에 사로잡혀 음침하고 차가운성격을 가지고있다.</div>
+                                                    <div>우치하 일족의 최후의 생존자 나루토의 최대의 라이벌이자 친구.<br>천부적인 소질을 가졌으며형에게 배신을 당해 복수심에 사로잡혀<br> 음침하고 차가운성격을 가지고있다.</div>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="imgbox">
-                                            <div class="img2 wow fadeInRight" data-wow-duration="1s" data-wow-delay="2s">
-                                            </div>
+                                            <img src="images/sa870.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -457,9 +453,7 @@
                                             </div>
                                         </div>
                                         <div class="imgbox">
-                                            <div class="img3">
-                                            </div>
-
+                                            <img src="images/sk870.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -477,8 +471,7 @@
                                             </div>
                                         </div>
                                         <div class="imgbox">
-                                            <div class="img4">
-                                            </div>
+                                            <img src="images/ka870.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -496,8 +489,7 @@
                                             </div>
                                         </div>
                                         <div class="imgbox">
-                                            <div class="img5">
-                                            </div>
+                                            <img src="images/th870.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -530,9 +522,7 @@
                                             </div>
                                         </div>
                                         <div class="imgbox1">
-                                            <div class="img6">
-                                            </div>
-
+                                            <img src="images/madara11.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -550,10 +540,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="imgbox1">
-                                            <div class="img7">
-                                            </div>
-
+                                        <div class="imgbox1 ob1">
+                                            <img src="images/obito11.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -572,9 +560,7 @@
                                             </div>
                                         </div>
                                         <div class="imgbox1">
-                                            <div class="img8">
-                                            </div>
-
+                                            <img src="images/itajja.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -595,9 +581,7 @@
                                             </div>
                                         </div>
                                         <div class="imgbox1">
-                                            <div class="img9">
-                                            </div>
-
+                                            <img src="images/pain1.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -616,14 +600,12 @@
                                             </div>
                                         </div>
                                         <div class="imgbox1">
-                                            <div class="img10">
-                                            </div>
-
+                                            <img src="images/deidara22.png" alt="">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                                      <!-- Add Arrows -->
+                            <!-- Add Arrows -->
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                         </div>
@@ -646,9 +628,7 @@
                                             </div>
                                         </div>
                                         <div class="imgbox1">
-                                            <div class="img11">
-                                            </div>
-
+                                            <img src="images/orug.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -667,9 +647,7 @@
                                             </div>
                                         </div>
                                         <div class="imgbox1">
-                                            <div class="img12">
-                                            </div>
-
+                                            <img src="images/jiraiya.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -688,9 +666,7 @@
                                             </div>
                                         </div>
                                         <div class="imgbox1">
-                                            <div class="img13">
-                                            </div>
-
+                                            <img src="images/gaara.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -709,9 +685,7 @@
                                             </div>
                                         </div>
                                         <div class="imgbox1">
-                                            <div class="img14">
-                                            </div>
-
+                                            <img src="images/hinata11.png" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -763,13 +737,14 @@
                             <div class="naru_Subimg" style="left: -100%;">
                                 <video src="video/%5BReadygo%5DVideo%202020-07-20%2017-32-12.mp4" autoplay muted loop class="s5video"></video>
                             </div>
-                            <div class="test" style="right: -100%; background: url(images/thumb-1920-1010918.png)50% 50% no-repeat;opacity: .8;"></div>
+                            <div class="test" style="right: -100%; background: url(images/thumb-1920-1010918.png)50% 50% no-repeat;background-size: cover;opacity: .8;"></div>
                             <div class="naruto_Subtxt" style="display: none;">
                                 <p class="naru_Subtxt_title">TV 애니메이션<br>
                                     명장면의 완벽 재현
                                 </p>
                                 <p class="naru_Subtxt_txt">명대사와 스토리는 물론 각 캐릭터의 스킬과 합기<br>화려한 전투씬을 게임으로 재현했습니다.</p>
                             </div>
+
                         </li>
                         <li class="cap2 naru_setting">
                             <div class="naru_Subimg" style="left: -100%;">
@@ -868,90 +843,90 @@
                         <li><a href=""><img src="images/partners_royal.png" alt="royal" /></a></li>
                     </ul>
                 </div>
-            <div class="footer_top">
-                <div class="container clearfix">
-                    <div class="col-one-forth">
-                        <h2 class="footer_logo"><a href="">footer logo</a></h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.
-                        </p>
-                        <a href="">Read More <span><i class="fas fa-caret-right"></i></span></a>
-                    </div>
-                    <div class="col-one-forth">
-                        <h3>Recent Posts</h3>
-                        <ul class="footer_list">
-                            <li>
-                                <span class="post_date">September 07, 2020</span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                                </p>
-                            </li>
-                            <li>
-                                <span class="post_date">September 07, 2020</span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                                </p>
-                            </li>
-                            <li>
-                                <span class="post_date">September 07, 2020</span>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-one-forth">
-                        <h3>Our Twitter</h3>
-                        <ul class="footer_list">
-                            <li>
-                                <p>
-                                    <span class="twitter_id">@redbee</span> Cum soluta nobis eleifend option congue nihil imperdiet doming
-                                </p>
-                                <span class="post_date">3 mins ago</span>
-                            </li>
-                            <li>
-                                <p>
-                                    <span class="twitter_id">@redbee</span> Cum soluta nobis eleifend option congue nihil imperdiet doming
-                                </p>
-                                <span class="post_date">3 mins ago</span>
-                            </li>
-                            <li>
-                                <p>
-                                    <span class="twitter_id">@redbee</span> Cum soluta nobis eleifend option congue nihil imperdiet doming
-                                </p>
-                                <span class="post_date">3 mins ago</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-one-forth">
-                        <h3>Dribbble Widget</h3>
-                        <ul class="dribble">
-                            <li><a href=""><img src="images/dribble1.jpg" alt="dribble 01" /></a></li>
-                            <li><a href=""><img src="images/dribble2.jpg" alt="dribble 02" /></a></li>
-                            <li><a href=""><img src="images/dribble3.jpg" alt="dribble 03" /></a></li>
-                            <li><a href=""><img src="images/dribble4.jpg" alt="dribble 04" /></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer_bottom">
-                <div class="container clearfix">
-                    <div class="copy">
-                        <p>
-                            Copyright &copy; 2020 <span>naruto</span> <span class="devider">&#124;</span> <a href="">Privacy Policy</a> <span class="devider">&#124;</span> <a href="">FAQ</a> <span class="devider">&#124;</span> <a href="">Support</a>
-                        </p>
-                    </div>
-                    <div class="designer">
-                        <p>
-                            Designed by <a href="">redbee</a> <span class="devider">&#124;</span> Only on <a href=""> Market</a>
-                        </p>
+                <div class="footer_top">
+                    <div class="container clearfix">
+                        <div class="col-one-forth">
+                            <h2 class="footer_logo"><a href="">footer logo</a></h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci suscipit lobortis claritatem.
+                            </p>
+                            <a href="">Read More <span><i class="fas fa-caret-right"></i></span></a>
+                        </div>
+                        <div class="col-one-forth">
+                            <h3>Recent Posts</h3>
+                            <ul class="footer_list">
+                                <li>
+                                    <span class="post_date">September 07, 2020</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                    </p>
+                                </li>
+                                <li>
+                                    <span class="post_date">September 07, 2020</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                    </p>
+                                </li>
+                                <li>
+                                    <span class="post_date">September 07, 2020</span>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-one-forth">
+                            <h3>Our Twitter</h3>
+                            <ul class="footer_list">
+                                <li>
+                                    <p>
+                                        <span class="twitter_id">@redbee</span> Cum soluta nobis eleifend option congue nihil imperdiet doming
+                                    </p>
+                                    <span class="post_date">3 mins ago</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <span class="twitter_id">@redbee</span> Cum soluta nobis eleifend option congue nihil imperdiet doming
+                                    </p>
+                                    <span class="post_date">3 mins ago</span>
+                                </li>
+                                <li>
+                                    <p>
+                                        <span class="twitter_id">@redbee</span> Cum soluta nobis eleifend option congue nihil imperdiet doming
+                                    </p>
+                                    <span class="post_date">3 mins ago</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-one-forth">
+                            <h3>Dribbble Widget</h3>
+                            <ul class="dribble">
+                                <li><a href=""><img src="images/dribble1.jpg" alt="dribble 01" /></a></li>
+                                <li><a href=""><img src="images/dribble2.jpg" alt="dribble 02" /></a></li>
+                                <li><a href=""><img src="images/dribble3.jpg" alt="dribble 03" /></a></li>
+                                <li><a href=""><img src="images/dribble4.jpg" alt="dribble 04" /></a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
+                <div class="footer_bottom">
+                    <div class="container clearfix">
+                        <div class="copy">
+                            <p>
+                                Copyright &copy; 2020 <span>naruto</span> <span class="devider">&#124;</span> <a href="">Privacy Policy</a> <span class="devider">&#124;</span> <a href="">FAQ</a> <span class="devider">&#124;</span> <a href="">Support</a>
+                            </p>
+                        </div>
+                        <div class="designer">
+                            <p>
+                                Designed by <a href="">redbee</a> <span class="devider">&#124;</span> Only on <a href=""> Market</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </footer>
- 
+
 
 
         <div class="s8">
