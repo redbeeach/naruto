@@ -36,10 +36,14 @@
     margin: 0 auto;
 }
 
+.mainbox {
+    width: 90%;
+    margin: 246px auto;
+    padding-left: 14%;
+    overflow: hidden;
+}
+
 .logo1 {
-    position: absolute;
-    top: 200px;
-    left: 380px;
     background: url(../images/logo.png)no-repeat;
     background-size: 100%;
     width: 400px;
@@ -47,21 +51,15 @@
 }
 
 .mainpont {
-    position: absolute;
-    top: 500px;
-    left: 400px;
     font-weight: 500;
+}
+
+.mobox {
+    padding-top: 53px;
 }
 
 .mainpont > span {
     font-size: 25px;
-}
-
-.mobox {
-    position: absolute;
-    top: 660px;
-    left: 380px;
-
 }
 
 .ios {
@@ -160,7 +158,7 @@
     position: relative;
     float: left;
     overflow: hidden;
-    box-shadow: rgba(0, 0, 0, .5) 0px 6px 8px 0px;
+    /*    box-shadow: rgba(0, 0, 0, .5) 0px 6px 8px 0px;*/
 }
 
 #support-grid ul li a.on {
@@ -198,7 +196,7 @@
 
 #support-grid ul li .on {
     margin-top: 0px;
-    margin-bottom: -3px;
+    margin-bottom: -6px;
 
 }
 
@@ -267,9 +265,6 @@
 
 .textbox {
     position: absolute;
-    top: 420px;
-    left: 40%;
-    transform: translate(-50%, -50%);
     opacity: .3;
     z-index: -1;
 }
@@ -291,6 +286,7 @@
     min-width: 1180px;
     overflow: hidden;
 }
+
 .textbx {
     float: left;
     padding-top: 323px;
@@ -484,7 +480,7 @@ input[id*="popup"] {
 
 input[id*="popup"] + label {
     display: inline-block;
-    padding: 20px 21px;
+    padding: 30px 21px;
     background: transparent;
     color: #fff;
     position: absolute;
@@ -637,6 +633,8 @@ input[id*="popup"]:checked + label + div {
     width: 100%;
     margin: 0 auto;
     height: 100%;
+    min-width: 1180px;
+    overflow: hidden;
 }
 
 .naru_list {
@@ -647,11 +645,12 @@ input[id*="popup"]:checked + label + div {
     bottom: 18%;
     left: 37%;
     z-index: 9999;
+    min-width: 1180px;
 }
 
 .naru_list li {
     float: left;
-    width: 3.5%;
+    /*    width: 3.5%;*/
     line-height: 35px;
     font-size: 18px;
     padding: 10px;
@@ -664,13 +663,15 @@ input[id*="popup"]:checked + label + div {
 }
 
 .game_Box {
-    height: 60px;
-    background: #333;
+    padding: 4px 31px;
+    font-size: 20px;
+    border: 1px solid #eee;
+    background: #7b7a7ac2;
     margin: 0 auto;
     transition: 1s;
     box-shadow: 0px 0px 0px inset #eee;
     cursor: pointer;
-    color: #e9e9e9;
+    color: #eee;
     line-height: 3;
 }
 
@@ -771,7 +772,8 @@ input[id*="popup"]:checked + label + div {
     right: 0;
     width: 66%;
     height: 100%;
-
+    background: url(../images/thumb-1920-1010918.png)50% 50% no-repeat;
+    background-size: cover;
 }
 
 /*
@@ -789,7 +791,8 @@ input[id*="popup"]:checked + label + div {
     top: 0;
     width: 66%;
     height: 100%;
-
+    background: url(../images/e0f4ded91879e46dcd000be6caf00c45.png)no-repeat;
+    background-size: cover;
 }
 
 /*
@@ -838,7 +841,8 @@ input[id*="popup"]:checked + label + div {
     width: 100%;
     height: 100%;
 }
-.bt{
+
+.bt {
     height: 50%
 }
 
@@ -1210,9 +1214,24 @@ footer {
     .focontainer {
         padding-left: 10%;
     }
+
     .contbox .conbox5 {
         width: 38%;
     }
+
+    .cont,
+    .cont1 {
+        min-width: auto;
+        width: auto;
+        /*        padding: 91px;*/
+        /*        padding: 0px 83px;*/
+    }
+
+/*
+    .menu-item {
+        font-size: 95px;
+    }
+*/
 }
 
 @media screen and (-ms-high-contrast:active),
@@ -1249,7 +1268,7 @@ all and (-ms-high-contrast:none) {
     }
 
     .naru_list {
-        left: 40%;
+        left: 61%;
     }
 
 }
@@ -1270,14 +1289,11 @@ all and (-ms-high-contrast:none) {
         line-height: 25px;
     }
 
-    .texts2 {
-        width: 816px;
-    }
-
     .tit_name {
         font-size: 56px;
     }
-        .ob1{
+
+    .ob1 {
         padding-left: 129px;
     }
 
@@ -1285,17 +1301,11 @@ all and (-ms-high-contrast:none) {
 
 @media all and (min-width:740px) and (max-width:1023px) {
 
+    /*
     .naru_list li {
         width: 6%;
     }
-
-    /*
-    .s5video {
-        margin-left: 230px;
-        width: 430px;
-    }
 */
-
     .naruto_Subtxt {
         top: 0px;
     }
@@ -1313,7 +1323,7 @@ all and (-ms-high-contrast:none) {
     }
 
     .naru_list {
-        width: 90%;
+        left: 61%;
     }
 
     .texts2 {
@@ -1336,25 +1346,47 @@ all and (-ms-high-contrast:none) {
     .desc_ch1 {
         width: 301px;
     }
+}
 
-    .mobox {
-        left: 168px;
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .textbx {
+        padding-top: 241px;
     }
 
-    .logo1 {
-        left: 255px;
+    .s5video {
+        height: 535px;
     }
 
-    .mainpont {
-        left: 276px;
+    .carilist {
+        padding: 0;
     }
 
+    .naru_setting .naru_Subimg {
+        padding-left: 16%;
+    }
+
+    .cap1 .test {
+        background-position: 96% 50%;
+    }
+
+    .cap2 .test {
+        background-position: 52% 0%;
+    }
+
+    .focontainer ul li {
+        width: 197px;
+    }
+
+    .focontainer {
+        margin: 53px auto;
+    }
 }
 
 @media all and (max-width:1180px) {
-    #wrap{
+    #wrap {
         min-width: auto;
     }
+
     .section {
         min-width: auto;
     }
@@ -1363,30 +1395,34 @@ all and (-ms-high-contrast:none) {
         min-width: auto;
     }
 
-    .cont,
-    .cont1 {
-        min-width: auto;
-        width: auto;
-/*        padding: 91px;*/
-/*        padding: 0px 83px;*/
-    }
     .imgbox,
     .imgbox1 {
         padding: 0;
     }
-        .contbox .conbox1 {
+
+    .contbox .conbox1 {
         width: 41%;
     }
+
     .carilist {
-    width: 100%;
+        width: 100%;
         min-width: auto;
     }
+
     .imgbox01 {
-    width: 565px;
-}
+        width: 565px;
+    }
+
+    .s5video {
+        height: 535px;
+    }
+
+    .textbox h2 {
+        font-size: 222px;
+    }
 }
 
-@media screen and (max-width:768px) {
+@media all and (max-width:768px) {
     #wrap {
         min-width: 100%;
     }
@@ -1395,25 +1431,19 @@ all and (-ms-high-contrast:none) {
         min-width: 100%;
     }
 
-    .logo1 {
-        left: 123px;
-        width: 300px;
+    #naruto_content1 {
+        min-width: auto;
     }
 
-    .btn {
-        top: 0;
-    }
-
-    .mobox {
-        left: 183px;
-        top: 570px;
+    .naru_list {
+        min-width: auto;
+        width: 100%;
+        bottom: 9%;
+        left: 0;
+        padding-left: 236px;
     }
 
     .mainpont {
-        left: 139px;
-        top: 424px;
-        font-size: 15px;
-        text-align: center;
         color: #fff;
         text-shadow: 1px 2px 1px rgba(0, 0, 0, .4);
     }
@@ -1428,13 +1458,6 @@ all and (-ms-high-contrast:none) {
 
     .texts2 > p {
         font-size: 14px;
-    }
-
-    .naru_list {
-        width: 100%;
-        padding: 0 159px;
-        bottom: 9%;
-        left: 0;
     }
 
     .cont,
@@ -1461,14 +1484,16 @@ all and (-ms-high-contrast:none) {
         padding-left: 73px;
     }
 
-    .imgbox{
+    .imgbox {
         width: 100%;
-       padding: 0px 113px;
+        padding: 0px 113px;
     }
-    .imgbox1{
+
+    .imgbox1 {
         padding: 0px 42px;
         width: 100%;
     }
+
     .footer_bottom {
         font-size: 8px;
     }
@@ -1501,9 +1526,11 @@ all and (-ms-high-contrast:none) {
         width: 100%;
         padding: 0;
     }
-    .tit_name{
+
+    .tit_name {
         display: none;
     }
+
     .imgbox,
     .imgbox1 {
         float: left;
@@ -1522,20 +1549,11 @@ all and (-ms-high-contrast:none) {
     .focontainer ul li {
         width: auto;
     }
-}
-
-@media all and (max-width:739px) {
 
     #content1 {
         height: 900px;
     }
 
-    /*
-    .s5video {
-        margin-left: 145px;
-        width: 430px;
-    }
-*/
     .tit_name {
         font-size: 40px;
     }
@@ -1574,12 +1592,7 @@ all and (-ms-high-contrast:none) {
     }
 
     .naru_list li {
-        width: 11%;
         font-size: 14px;
-    }
-
-    .game_Box {
-        width: 90%;
     }
 
     .naru_setting .naru_Subimg {
@@ -1590,6 +1603,10 @@ all and (-ms-high-contrast:none) {
     .naru_setting .naruto_Subtxt {
         float: none;
         width: 100%;
+    }
+
+    .s5video {
+        height: 714px;
     }
 
     .cap1 .naruto_Subtxt {
@@ -1622,8 +1639,31 @@ all and (-ms-high-contrast:none) {
 }
 
 @media all and (max-width:500px) {
+
+    .aos,
+    .ios {
+        display: block;
+    }
+
+    .mainpont {
+        padding-left: 41px;
+    }
+
+    .mobox {
+        padding-left: 100px;
+    }
+
+    .btn {
+        top: 0px;
+        padding: 19px 33px;
+    }
+
     .naru_setting .naru_Subimg {
         padding-left: 11%;
+    }
+
+    .naru_list {
+        padding-left: 107px;
     }
 
     .cap1 .naruto_Subtxt {
